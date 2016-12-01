@@ -1,0 +1,187 @@
+pre.highlight {
+    /*
+     * Comment           - Single ligne comments
+     * Comment.Multiline - Mutliline comments
+     * Comment.Single    - Comments that end at the end of the line
+     * Comment.Special   - Special data in comments such as @license in Javadoc
+
+     * Comment.Preproc   - Preprocessor comments such as <% %> in ERb
+     */
+
+    .c, .cm, .c1, .cs {
+        color: $color-text-light;
+        font-style: italic;
+    }
+
+    .cp {
+        font-weight: bold;
+    }
+
+
+
+
+    /*
+     *  Error - Lexer errors
+     */
+
+    .err {
+        color: $color-text-light;
+    }
+
+
+
+
+    /*
+     * Generic            - Unstyled token
+     * Generic.Prompt     - Marked as a command prompt
+
+     * Generic.Error      - Token value as an error message
+     * Generic.Deleted    - Token value as deleted
+     * Generic.Heading    - Token value as a headline
+     * Generic.Inserted   - Token value as inserted
+     * Generic.Lineno     - Line numbers
+     * Generic.Output     - Marked as a program output
+     * Generic.Subheading - Marked as a subheadline
+     * Generic.Traceback  - Mark the token as a part of an error traceback
+
+     * Generic.Emph       - Token value as emphasized
+     * Generic.Strong     - Mark the token value as bold (for rst lexer)
+     */
+
+    .g {}
+
+    .gp {
+        font-weight: bold;
+    }
+
+    .gr, .gd, .gh, .gi, .gl, .go, .gu, .gt {
+        color: $color-text-light;
+    }
+
+    .ge {
+        font-style: italic;
+    }
+
+    .gs {
+        font-weight: bold;
+    }
+
+
+
+
+    /*
+     *  Keyword             - Any keyword
+     *  Keyword.Constant    - Keywords that are constants
+     *  Keyword.Declaration - Keywords used for variable declaration (e.g. var in javascript)
+     *  Keyword.Namespace   - Keywords used for namespace declarations
+     *  Keyword.Pseudo      - Keywords that aren't really keywords
+     *  Keyword.Reserved    - Keywords which are reserved (such as end in Ruby)
+     *  Keyword.Type        - Keywords wich refer to a type id (such as int in C)
+     */
+
+    .k, .kc, .kd, .kn, .kp, .kr, .kt {
+        font-weight: bold;
+
+    }
+
+
+
+
+    /*
+     * Literal                     - Any literal (if not further defined)
+     * Literal.Date                - Date literals
+     * Literal.String              - String literals
+     * Literal.String.Backtick     - String enclosed in backticks
+     * Literal.String.Char         - Token type for single characters
+     * Literal.String.Doc          - Documentation strings (such as in Python)
+     * Literal.String.Double       - Double quoted strings
+     * Literal.String.Escape       - Escaped sequences in strings
+     * Literal.String.Heredoc      - For "heredoc" strings (e.g. in Ruby)
+     * Literal.String.Interpol     - For interpoled part in strings (e.g. in Ruby)
+     * Literal.String.Other        - Token type for any other strings (for example %q{foo} string constructs in Ruby)
+     * Literal.String.Regex        - Regular expressions literals
+     * Literal.String.Single       - Single quoted strings
+     * Literal.String.Symbol       - Symbols (such as :foo in Ruby)
+     * Literal.Number              - Any number literal (if not further defined)
+     * Literal.Number.Float        - Float numbers
+     * Literal.Number.Hex          - Hexadecimal numbers
+     * Literal.Number.Integer      - Integer literals
+     * Literal.Number.Integer.Long - Long interger literals
+     * Literal.Number.Oct          - Octal literals
+     */
+
+    .l, .ld, .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss, .m, .mf, .mh, .mi, .il, .mo {}
+
+
+
+
+    /*
+     * Name                   - Variable/function names
+     * Name.Attribute         - Attributes (in HTML for instance)
+     * Name.Builtin           - Builtin names which are available in the global namespace
+     * Name.Builtin.Pseudo    - Builtin names that are implicit (such as self in Ruby)
+     * Name.Constant          - For constants
+     * Name.Decorator         - For decorators in languages such as Python or Java
+     * Name.Entity            - Token for entitites such as &nbsp; in HTML
+     * Name.Function          - Function names
+     * Name.Property          - Token for properties
+     * Name.Label             - For label names
+     * Name.Namespace         - Token for namespaces
+     * Name.Other             - For other names
+     * Name.Tag               - Tag mainly for markup such as XML or HTML
+     * Name.Variable          - Token for variables
+     * Name.Variable.Class    - Token for class variables (e.g. @@var in Ruby)
+     * Name.Variable.Global   - For global variables (such as $LOAD_PATH in Ruby)
+     * Name.Variable.Instance - Token for instance variables (such as @var in Ruby)
+
+     * Name.Class             - For class declaration
+     * Name.Exception         - Exceptions and errors (e.g. ArgumentError in Ruby)
+     */
+
+    .n, .na, .nb, .bp, .no, .nd, .ni, .nf, .py, .nl, .nn, .nx, .nt, .nv, .vc, .vg, .vi {}
+
+    .nc, .ne {
+        font-weight: bold;
+    }
+
+
+
+
+    /*
+     * Operator      - Operators (commonly +, -, /, *)
+     * Operator.Word - Word operators (e.g. and)
+     */
+
+    .o, .ow {
+        font-weight: bold;
+    }
+
+
+
+
+    /*
+     * Punctuation - Punctuation which is not an operator
+     */
+
+    .p {}
+
+
+
+
+    /*
+     * Text.Whitespace - Specially highlighted whitespace
+     */
+
+    .w {
+        color: $color-text-light;
+    }
+
+
+
+
+    /*
+     * Other - Token for data not matched by a parser (e.g. HTML markup in PHP code)
+     */
+
+    .x {}
+}

@@ -1,0 +1,39 @@
+<footer class="site-footer">
+    <div class="col-wrapper">
+        <div class="col-left">
+            {% if site.description %}
+            <p>{{ site.description }}</p>
+            {% endif %}
+
+            {% if site.copyright %}
+            <p>{{ site.copyright }}</p>
+            {% endif %}
+        </div>
+
+        <div class="col-right">
+            <p><a href="{{ 'atom.xml' | relative_url }}">Subscribe via Atom</a></p>
+
+            <p>
+            {% if site.contact.email %}
+                <a class="fa fa-envelope" aria-hidden="true" href="mailto:{{ site.contact.email }}" alt="link to email"></a>
+            {% endif %}
+
+            {% if site.contact.github_username %}
+                <a class="fa fa-github" aria-hidden="true" href="https://www.github.com/{{ site.contact.github_username }}" alt="link to github"></a>
+            {% endif %}
+
+            {% if site.contact.linkedin_username %}
+                <a class="fa fa-linkedin" aria-hidden="true" href="https://www.linkedin.com/in/{{ site.contact.linkedin_username }}" alt="link to linkedin"></a>
+            {% endif %}
+
+            {% if site.contact.medium_username %}
+                <a class="fa fa-medium" aria-hidden="true" href="https://www.medium.com/@{{ site.contact.medium_username }}" alt="link to medium"></a>
+            {% endif %}
+
+            {% if site.contact.twitter_username %}
+                <a class="fa fa-twitter" aria-hidden="true" href="https://www.twitter.com/{{ site.contact.twitter_username }}" alt="link to twitter"></a>
+            {% endif %}
+            </p>
+        </div>
+    </div>
+</footer>

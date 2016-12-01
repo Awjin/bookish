@@ -1,0 +1,169 @@
+/*
+ *  Base
+ */
+
+html,
+body {
+    width: 100%;
+    background: $color-background;
+    font: $font-size-base $font-family-serif;
+    color: $color-text-base;
+}
+
+body {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    line-height: $line-height-base;
+}
+
+.page-content {
+    padding-top: $spacing-unit * 3.5;
+}
+
+.col-left,
+.col-right {
+    display: block;
+}
+
+
+
+
+/*
+ *  Header
+ */
+
+.site-header {
+    font-family: $font-family-sans;
+
+    .col-right {
+        padding-top: $spacing-unit / 2;
+    }
+
+    a {
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    .site-title {
+        font-size: $font-size-large;
+        font-weight: bold;
+    }
+}
+
+
+
+
+/*
+ *  Posts
+ */
+
+.post-listing,
+.post-meta {
+    font-family: $font-family-sans;
+}
+
+.post-listing {
+    margin: 0;
+    list-style: none;
+
+    li {
+        margin-bottom: $spacing-unit;
+    }
+
+    .post-blurb {
+        margin-top: $spacing-unit / 4;
+        margin-bottom: $spacing-unit / 8;
+        font: $font-size-small $font-family-serif;
+        font-style: italic;
+        line-height: $line-height-medium;
+    }
+}
+
+.post-meta {
+    color: $color-text-light;
+}
+
+.archive-link {
+    padding-top: $spacing-unit * 1.5;
+    text-align: right;
+}
+
+.post-header {
+    overflow: hidden;
+    margin-top: - ($margin-bottom-h1 / 2);
+    margin-bottom: $margin-bottom-h1;
+}
+
+.post-navigation {
+    margin-top: $spacing-unit * 6;
+    margin-bottom: $spacing-unit * -3;
+    color: $color-text-light;
+
+    .post-older + .post-newer {
+        margin-top: $spacing-unit;
+    }
+}
+
+
+
+
+/*
+ *  Footer
+ */
+
+.site-footer {
+    margin-top: $spacing-unit * 6;
+    font-family: $font-family-sans;
+    color: $color-text-light;
+
+    p {
+        margin: $spacing-unit 0;
+    }
+
+    .fa {
+        padding-left: 1px;
+        font-size: $font-size-large;
+
+        &:not(:first-child) {
+            margin-left: 0.75em;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    .col-right {
+        padding-top: $spacing-unit / 4;
+    }
+}
+
+
+
+
+/*
+ *  Media Queries
+ */
+
+ @media all and (min-width: $content-width) {
+    .col-left {
+        float: left;
+        margin-right: 1rem;
+    }
+
+    .col-right {
+        overflow: hidden;
+        padding: 0 0.33rem;
+    }
+
+    .site-header,
+    .site-footer {
+        .col-right {
+            padding-top: 0;
+            text-align: right;
+        }
+    }
+}

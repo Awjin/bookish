@@ -1,0 +1,35 @@
+---
+layout: page
+---
+
+{% for post in site.posts  %}
+    {% capture curr_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+    {% if forloop.first %}
+    <h2>{{curr_year}}</h2>
+    <ul class="post-listing">
+    {% endif %}
+
+        <li>
+            <div class="col-wrapper">
+                <div class="col-left">
+                    <span class="post-meta">{{ post.date | date: site.date_format }}</span>
+                </div>
+
+                <div class="col-right">
+                    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </div>
+            </div>
+        </li>
+
+    {% if forloop.last %}
+    </ul>
+    {% elsif next_year != curr_year %}
+    </ul>
+
+    <h2>{{next_year}}</h2>
+
+    <ul class="post-listing">
+    {% endif %}
+{% endfor %}

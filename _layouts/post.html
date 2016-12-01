@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article class="post">
+    <h1>{{ page.title | escape }}</h1>
+
+    <div class="col-wrapper post-header">
+        <div class="col-left">
+            <span class="post-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time>
+            </span>
+        </div>
+
+        <div class="col-right">
+            <span class="post-meta">
+                {% for tag in page.tags %}
+                <a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>
+                {% endfor %}
+            </span>
+        </div>
+    </div>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    {% if site.disqus.shortname %}
+        {% include disqus-comments.html %}
+    {% endif %}
+</article>
+
+{% include post-navigation.html %}

@@ -1,0 +1,39 @@
+# Site setup
+title:       Bookish
+baseurl:     ""
+date_format: "%b %d, %Y"
+
+# Contact - set to blank if N/A
+contact:
+    name:              Awjin Ahn
+    email:             awjinahn@gmail.com
+    github_username:   Awjin
+    linkedin_username: awjin
+    medium_username:   awjypodgy
+    twitter_username:  awjypodgy
+
+# Included in html head and footer
+description: A crisp, readable Jekyll theme.
+
+# Included in footer
+copyright: MIT License
+
+# Homepage
+listing_limit: 10     # set to blank for no limit
+show_title:    false
+show_dates:    true
+show_blurbs:   true
+show_pinned:   true
+
+# Theme [light]
+color_theme: light
+
+# Gems
+gems:
+    - jekyll-paginate
+
+# Build
+markdown: kramdown
+exclude:
+    - Gemfile
+    - Gemfile.lock
