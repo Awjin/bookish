@@ -23,7 +23,7 @@ listing_limit: 10     # set to blank for no limit
 show_title:    false
 show_dates:    true
 show_blurbs:   true
-show_pinned:   true
+show_featured: true
 
 # Theme [light]
 color_theme: light

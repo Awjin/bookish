@@ -3,6 +3,8 @@ layout: default
 ---
 
 <div class="post">
+    <!-- Post Header -->
+
     {% assign content = post.content | strip_newlines %}
 
     {% if site.show_title or content != "" %}
@@ -17,6 +19,46 @@ layout: default
     </header>
     {% endif %}
 
+
+    <!-- Featured Posts -->
+
+    {% assign featured_count = 0 %}
+
+    {% if site.show_featured %}
+        {% for post in site.posts %}
+            {% if post.featured %}
+                {% if featured_count == 0 %}
+    <ul class="post-listing">
+                {% endif %}
+
+                {% assign featured_count = featured_count | plus: 1 %}
+        <li>
+            <div class="col-wrapper">
+                <div class="col-left">
+                    <span class="post-meta">Featured &nbsp;<i class="fa fa-star"></i></span>
+                </div>
+
+                <div class="col-right">
+                    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+
+                    {% if site.show_blurbs and post.blurb %}
+                    <p class="post-blurb">{{ post.blurb | escape }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </li>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {% if featured_count > 0 %}
+    </ul>
+    <hr>
+    {% endif %}
+
+
+    <!-- Main Listing -->
+
     {% for post in site.posts %}
         {% assign post_count = post_count | plus: 1 %}
     {% endfor %}
@@ -25,10 +67,11 @@ layout: default
         {% if site.listing_limit == "" %}
             {% assign listing_limit = post_count %}
         {% else %}
-            {% assign listing_limit = site.listing_limit %}
+            {% assign listing_limit = site.listing_limit + featured_count %}
         {% endif %}
 
         {% for post in site.posts limit: listing_limit %}
+            {% unless post.featured %}
         <li>
             <div class="col-wrapper">
                 <div class="col-left">
@@ -46,8 +89,12 @@ layout: default
                 </div>
             </div>
         </li>
+            {% endunless %}
         {% endfor %}
     </ul>
+
+
+    <!-- Archive Link -->
 
     {% if site.listing_limit < post_count %}
     <div class="col-wrapper archive-link">

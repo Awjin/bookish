@@ -26,6 +26,10 @@ body {
     display: block;
 }
 
+.col-right {
+    margin-top: $spacing-unit / 8;
+}
+
 
 
 
@@ -49,60 +53,6 @@ body {
     .site-title {
         font-size: $font-size-large;
         font-weight: bold;
-    }
-}
-
-
-
-
-/*
- *  Posts
- */
-
-.post-listing,
-.post-meta {
-    font-family: $font-family-sans;
-}
-
-.post-listing {
-    margin: 0;
-    list-style: none;
-
-    li {
-        margin-bottom: $spacing-unit;
-    }
-
-    .post-blurb {
-        margin-top: $spacing-unit / 4;
-        margin-bottom: $spacing-unit / 8;
-        font: $font-size-small $font-family-serif;
-        font-style: italic;
-        line-height: $line-height-medium;
-    }
-}
-
-.post-meta {
-    color: $color-text-light;
-}
-
-.archive-link {
-    padding-top: $spacing-unit * 1.5;
-    text-align: right;
-}
-
-.post-header {
-    overflow: hidden;
-    margin-top: - ($margin-bottom-h1 / 2);
-    margin-bottom: $margin-bottom-h1;
-}
-
-.post-navigation {
-    margin-top: $spacing-unit * 6;
-    margin-bottom: $spacing-unit * -3;
-    color: $color-text-light;
-
-    .post-older + .post-newer {
-        margin-top: $spacing-unit;
     }
 }
 
@@ -148,7 +98,7 @@ body {
  *  Media Queries
  */
 
- @media all and (min-width: $content-width) {
+@media all and (min-width: $content-width) {
     .col-left {
         float: left;
         margin-right: 1rem;
@@ -156,6 +106,7 @@ body {
 
     .col-right {
         overflow: hidden;
+        margin-top: 0;
         padding: 0 0.33rem;
     }
 

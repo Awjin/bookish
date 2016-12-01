@@ -2,7 +2,8 @@
 layout: post
 title: Markdown Demonstration
 tags: [Demo, Random]
-blurb: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
+blurb: This is a blurb about the post. Long blurbs, like this one, wrap nicely. Featured posts are not duplicated on the homepage, but they do show up in the archive.
+featured: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
