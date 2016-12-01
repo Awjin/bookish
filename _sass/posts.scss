@@ -2,19 +2,25 @@
  *  Post
  */
 
-.post-header {
+.post-info {
     overflow: hidden;
-    margin-top: - ($margin-bottom-h1 / 2);
+    margin-top: $margin-bottom-h1 / -2;
     margin-bottom: $margin-bottom-h1;
 }
 
-.post-navigation {
+.post-meta {
+    font-family: $font-family-sans;
+    color: $color-text-light;
+}
+
+.post-listing-recent {
     margin-top: $spacing-unit * 6;
-    margin-bottom: $spacing-unit * -3;
     color: $color-text-light;
 
-    .post-older + .post-newer {
-        margin-top: $spacing-unit;
+    .post-meta,
+    a {
+        display: inline-block;
+        margin-bottom: $spacing-unit;
     }
 }
 
@@ -22,7 +28,7 @@
 
 
 /*
- *  Post Listing (Homepage)
+ *  Homepage
  */
 
 .post-listing {
@@ -43,21 +49,8 @@
     }
 }
 
-.post-meta {
-    font-family: $font-family-sans;
-    color: $color-text-light;
-}
-
-.col-pinned {
-    a {
-        display: inline-block;
-        &:not(:first-child) {
-            margin-top: $spacing-unit;
-        }
-    }
-}
-
 .archive-link {
-    padding-top: $spacing-unit * 1.5;
+    padding-top: $spacing-unit * 2;
     text-align: right;
+    font-family: $font-family-sans;
 }

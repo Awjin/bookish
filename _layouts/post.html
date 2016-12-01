@@ -5,7 +5,7 @@ layout: default
 <article class="post">
     <h1>{{ page.title | escape }}</h1>
 
-    <div class="col-wrapper post-header">
+    <div class="col-wrapper post-info">
         <div class="col-left">
             <span class="post-meta">
                 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time>
@@ -14,9 +14,9 @@ layout: default
 
         <div class="col-right">
             <span class="post-meta">
-                {% for tag in page.tags %}
+{% for tag in page.tags %}
                 <a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>
-                {% endfor %}
+{% endfor %}
             </span>
         </div>
     </div>
@@ -25,9 +25,25 @@ layout: default
         {{ content }}
     </div>
 
-    {% if site.disqus.shortname %}
-        {% include disqus-comments.html %}
-    {% endif %}
-</article>
+    <div class="post-listing-recent">
+        <ul class="post-listing">
+            <li>
+                <div class="col-wrapper">
+                    <div class="col-left post-meta">
+                        Recent Posts
+                    </div>
 
-{% include post-navigation.html %}
+                    <div class="col-right">
+{% for post in site.posts limit: site.recent_listing_limit %}
+                        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a><br>
+{% endfor %}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+{% if site.disqus.shortname %}
+    {% include disqus-comments.html %}
+{% endif %}
+</article>

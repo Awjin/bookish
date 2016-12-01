@@ -18,7 +18,7 @@ body {
 }
 
 .page-content {
-    padding-top: $spacing-unit * 3.5;
+    padding-top: $spacing-unit * 4;
 }
 
 .col-left,
@@ -68,6 +68,10 @@ body {
     font-family: $font-family-sans;
     color: $color-text-light;
 
+    .col-right {
+        padding-top: $spacing-unit / 4;
+    }
+
     p {
         margin: $spacing-unit 0;
     }
@@ -84,10 +88,6 @@ body {
         &:focus {
             text-decoration: none;
         }
-    }
-
-    .col-right {
-        padding-top: $spacing-unit / 4;
     }
 }
 

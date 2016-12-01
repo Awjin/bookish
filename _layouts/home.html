@@ -5,33 +5,33 @@ layout: default
 <div class="post">
     <!-- Post Header -->
 
-    {% assign content = post.content | strip_newlines %}
+{% assign content = post.content | strip_newlines %}
 
-    {% if site.show_title or content != "" %}
-    <header class="post-header">
-        {% if site.show_title %}
+{% if site.show_title or content != "" %}
+    <header class="post-info">
+    {% if site.show_title %}
         <h1>{{ site.title | escape }}</h1>
-        {% endif %}
-
-        {% if content != "" %}
-        <p>{{ content }}</p>
-        {% endif %}
-    </header>
     {% endif %}
+
+    {% if content != "" %}
+        <p>{{ content }}</p>
+    {% endif %}
+    </header>
+{% endif %}
 
 
     <!-- Featured Posts -->
 
-    {% assign featured_count = 0 %}
+{% assign featured_count = 0 %}
 
-    {% if site.show_featured %}
-        {% for post in site.posts %}
-            {% if post.featured %}
-                {% if featured_count == 0 %}
+{% if site.show_featured %}
+    {% for post in site.posts %}
+        {% if post.featured %}
+            {% if featured_count == 0 %}
     <ul class="post-listing">
-                {% endif %}
+            {% endif %}
 
-                {% assign featured_count = featured_count | plus: 1 %}
+            {% assign featured_count = featured_count | plus: 1 %}
         <li>
             <div class="col-wrapper">
                 <div class="col-left">
@@ -41,68 +41,68 @@ layout: default
                 <div class="col-right">
                     <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 
-                    {% if site.show_blurbs and post.blurb %}
+            {% if site.show_blurbs and post.blurb %}
                     <p class="post-blurb">{{ post.blurb | escape }}</p>
-                    {% endif %}
+            {% endif %}
                 </div>
             </div>
         </li>
-            {% endif %}
-        {% endfor %}
-    {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
 
-    {% if featured_count > 0 %}
+{% if featured_count > 0 %}
     </ul>
     <hr>
-    {% endif %}
+{% endif %}
 
 
     <!-- Main Listing -->
 
-    {% for post in site.posts %}
-        {% assign post_count = post_count | plus: 1 %}
-    {% endfor %}
+{% for post in site.posts %}
+    {% assign post_count = post_count | plus: 1 %}
+{% endfor %}
 
     <ul class="post-listing">
-        {% if site.listing_limit == "" %}
-            {% assign listing_limit = post_count %}
-        {% else %}
-            {% assign listing_limit = site.listing_limit + featured_count %}
-        {% endif %}
+{% if site.listing_limit == "" %}
+    {% assign listing_limit = post_count %}
+{% else %}
+    {% assign listing_limit = site.listing_limit + featured_count %}
+{% endif %}
 
-        {% for post in site.posts limit: listing_limit %}
-            {% unless post.featured %}
+{% for post in site.posts limit: listing_limit %}
+    {% unless post.featured %}
         <li>
             <div class="col-wrapper">
                 <div class="col-left">
-                    {% if site.show_dates %}
+        {% if site.show_dates %}
                     <span class="post-meta">{{ post.date | date: site.date_format }}</span>
-                    {% endif %}
+        {% endif %}
                 </div>
 
                 <div class="col-right">
                     <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 
-                    {% if site.show_blurbs and post.blurb %}
+        {% if site.show_blurbs and post.blurb %}
                     <p class="post-blurb">{{ post.blurb | escape }}</p>
-                    {% endif %}
+        {% endif %}
                 </div>
             </div>
         </li>
-            {% endunless %}
-        {% endfor %}
+    {% endunless %}
+{% endfor %}
     </ul>
 
 
     <!-- Archive Link -->
 
-    {% if site.listing_limit < post_count %}
+{% if site.listing_limit < post_count %}
     <div class="col-wrapper archive-link">
         <div class="col-left"></div>
 
         <div class="col-right">
-            <a href="archive">Older Posts <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+            <a href="archive">Archive <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
         </div>
     </div>
-    {% endif %}
+{% endif %}
 </div>

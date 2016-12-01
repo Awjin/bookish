@@ -5,11 +5,11 @@
         </div>
 
         <div class="col-right">
-            {% for page in site.pages %}
-                {% if page.title and page.title != 404 %}
+{% for page in site.pages %}
+    {% if page.title and page.title != 404 %}
             <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
-                {% endif %}
-            {% endfor %}
+    {% endif %}
+{% endfor %}
         </div>
     </div>
 </header>
