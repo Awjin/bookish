@@ -52,7 +52,7 @@ layout: default
 {% if site.listing_limit == "" %}
     {% assign listing_limit = post_count %}
 {% else %}
-    {% assign listing_limit = site.listing_limit + featured_count %}
+    {% assign listing_limit = site.listing_limit | plus: featured_count) %}
 {% endif %}
     <ul class="post-listing">
 {% for post in site.posts limit: listing_limit %}
@@ -78,7 +78,7 @@ layout: default
 
     <!-- Archive Link -->
 
-{% if site.listing_limit < post_count %}
+{% if listing_limit < post_count %}
     <div class="col-wrapper archive-link">
         <div class="col-left"></div>
         <div class="col-right">

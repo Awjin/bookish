@@ -1,37 +1,85 @@
-# Site setup
-title:       Bookish
-baseurl:     ""
-date_format: "%b %d, %Y"
+# Blog Configuration
+# ------------------
+# All values must be populated unless specified otherwise
 
-# Contact - set to blank if N/A
+
+
+
+# Site Config
+
+title: Bookish
+    # Shown in header and footer
+
+baseurl:
+    # Can be blank
+    # Set this if e.g. you have multiple sites with the same root url
+
+date_format: "%b %d, %Y"
+    # Default: "%b %d, %Y"
+
+color_theme: light
+    # [light]
+
 contact:
-    name:              Awjin Ahn
-    email:             awjinahn@gmail.com
+    name:  Awjin Ahn
+    email: awjinahn@gmail.com
+
+    # The following can be blank if N/A:
     github_username:   Awjin
     linkedin_username: awjin
     medium_username:   awjypodgy
     twitter_username:  awjypodgy
 
-# Homepage
-listing_limit: 4  # set to blank for no limit
-show_dates:    true
-show_blurbs:   true
+
+
+
+# Homepage Config
+
+listing_limit: 2
+    # [blank = no limit]
+    # Number of posts shown on the homepage
+    # Remaining posts are kept in Archive
+    # Feature posts do not count against the limit
+
+show_dates: true
+    # [true/false]
+    # Show the published date next to the title
+
+show_blurbs: true
+    # [true/false]
+    # Show the post blurb under the title
+    # Blurb can be added in a post's front matter
+
 show_featured: true
+    # [true/false]
+    # Pin featured posts to the top of the homepage
 
-# Recent Posts
-recent_listing_limit: 3
-
-# Included in html head and footer
 description: A crisp, readable Jekyll theme.
+    # Can be blank
+    # Included in head and footer
 
-# Included in footer
 copyright: MIT License
+    # Can be blank
+    # Included in footer
 
-# Theme [light]
-color_theme: light
 
-# Build
+
+
+# Post Config
+
+recent_listing_limit: 3
+    # Included at the end of the post
+    # Displays links to the most recent posts
+
+
+
+
+# Build Config
+
 markdown: kramdown
+    # Markdown engine
+    # Default: kramdown
+
 exclude:
     - Gemfile
     - Gemfile.lock
