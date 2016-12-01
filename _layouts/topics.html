@@ -19,7 +19,6 @@ layout: page
 
 {% for tag in sorted_tags %}
 <h2 id="{{ tag }}">{{ tag }}</h2>
-
 <ul class="post-listing">
     {% for post in posts %}
         {% if post.tags contains tag %}

@@ -4,14 +4,12 @@ layout: default
 
 <article class="post">
     <h1>{{ page.title | escape }}</h1>
-
     <div class="col-wrapper post-info">
         <div class="col-left">
             <span class="post-meta">
                 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time>
             </span>
         </div>
-
         <div class="col-right">
             <span class="post-meta">
 {% for tag in page.tags %}
@@ -20,28 +18,27 @@ layout: default
             </span>
         </div>
     </div>
-
     <div class="post-content">
         {{ content }}
     </div>
-
-    <div class="post-listing-recent">
-        <ul class="post-listing">
-            <li>
-                <div class="col-wrapper">
-                    <div class="col-left post-meta">
-                        Recent Posts
-                    </div>
-
-                    <div class="col-right">
-{% for post in site.posts limit: site.recent_listing_limit %}
-                        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a><br>
-{% endfor %}
-                    </div>
+    <ul class="post-listing-recent">
+        <li>
+            <div class="col-wrapper">
+                <div class="col-left post-meta">
+                    Recent Posts
                 </div>
-            </li>
-        </ul>
-    </div>
+                <div class="col-right">
+                    <ul class="post-listing">
+{% for post in site.posts limit: site.recent_listing_limit %}
+                        <li>
+                            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a><br>
+                        </li>
+{% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
 
 {% if site.disqus.shortname %}
     {% include disqus-comments.html %}

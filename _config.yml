@@ -22,7 +22,7 @@ show_featured: true
 recent_listing_limit: 3
 
 # Included in html head and footer
-description: A crisp, readable Jekyll theme
+description: A crisp, readable Jekyll theme.
 
 # Included in footer
 copyright: MIT License
