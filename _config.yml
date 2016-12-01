@@ -28,10 +28,6 @@ show_pinned:   true
 # Theme [light]
 color_theme: light
 
-# Gems
-gems:
-    - jekyll-paginate
-
 # Build
 markdown: kramdown
 exclude:
