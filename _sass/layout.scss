@@ -18,7 +18,11 @@ body {
 }
 
 .page-content {
-    padding-top: $spacing-unit * 4;
+    padding-top: $page-whitespace-small;
+}
+
+.col-wrapper {
+    overflow: hidden;
 }
 
 .col-left,
@@ -64,9 +68,9 @@ body {
  */
 
 .site-footer {
-    margin-top: $spacing-unit * 6;
+    margin-top: $page-whitespace-large;
     font-family: $font-family-sans;
-    color: $color-text-light;
+    color: $color-text-lightest;
 
     .col-right {
         padding-top: $spacing-unit / 4;
@@ -81,7 +85,7 @@ body {
         font-size: $font-size-large;
 
         &:not(:first-child) {
-            margin-left: 0.75em;
+            margin-left: 1em;
         }
 
         &:hover,

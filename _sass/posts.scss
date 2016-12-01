@@ -3,22 +3,21 @@
  */
 
 .post-info {
-    overflow: hidden;
     margin-top: $margin-bottom-h1 / -2;
     margin-bottom: $margin-bottom-h1;
 }
 
 .post-meta {
     font-family: $font-family-sans;
-    color: $color-text-light;
+    color: $color-text-lightest;
 }
 
 .post-listing-recent {
-    margin-top: $spacing-unit * 6;
-    color: $color-text-light;
+    margin-top: $page-whitespace-small;
+    color: $color-text-lightest;
 
-    .post-meta,
-    a {
+    a,
+    .post-meta {
         display: inline-block;
         margin-bottom: $spacing-unit;
     }
@@ -45,12 +44,13 @@
         margin-bottom: $spacing-unit / 8;
         font: $font-size-small $font-family-serif;
         font-style: italic;
-        line-height: $line-height-medium;
+        line-height: $line-height-smaller;
+        color: $color-text-lighter;
     }
 }
 
 .archive-link {
-    padding-top: $spacing-unit * 2;
+    margin-top: $page-whitespace-small;
     text-align: right;
     font-family: $font-family-sans;
 }

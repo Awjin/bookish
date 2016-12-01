@@ -14,7 +14,6 @@ contact:
 
 # Homepage
 listing_limit: 4  # set to blank for no limit
-show_title:    false
 show_dates:    true
 show_blurbs:   true
 show_featured: true

@@ -3,21 +3,12 @@ layout: default
 ---
 
 <div class="post">
-    <!-- Post Header -->
+{% assign content_string = content | strip_newlines %}
 
-{% assign content = post.content | strip_newlines %}
-
-{% if site.show_title or content != "" %}
-    <header class="post-info">
-    {% if site.show_title %}
-        <h1>{{ site.title | escape }}</h1>
-    {% endif %}
-
-    {% if content != "" %}
-        <p>{{ content }}</p>
-    {% endif %}
-    </header>
-{% endif %}
+{% unless content_string == "" %}
+    {{ content }}
+    <br>
+{% endunless %}
 
 
     <!-- Featured Posts -->

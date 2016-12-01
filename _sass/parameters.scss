@@ -1,28 +1,30 @@
-$content-width:     43rem;
-$spacing-unit:      1.25rem;
-$font-size-value:   15;
-$line-height-value: 145;
+$font-size-value:       15;
+$line-height-value:     145;
+$content-width:         40rem;
+$spacing-unit:          1.25rem;
+$page-whitespace-small: $spacing-unit * 4;
+$page-whitespace-large: $spacing-unit * 6;
 
 ////
 
-$font-family-mono: "Droid Sans Mono", monospace;
-$font-family-sans: Tahoma, sans;
-$font-family-serif: Georgia, serif;
-
-$font-size-base:  $font-size-value + 0px;
-$font-size-large: ($font-size-value * 1.15) + 0px;
+$font-size-base:  ($font-size-value * 1.00) + 0px;
 $font-size-small: ($font-size-value * 0.95) + 0px;
+$font-size-large: ($font-size-value * 1.15) + 0px;
 
-$font-size-h1: 166%;
-$font-size-h2: 133%;
-$font-size-h3: 100%;
-$font-size-h4: 97.5%;
+$font-size-h1: 166.0%;
+$font-size-h2: 133.0%;
+$font-size-h3: 100.0%;
+$font-size-h4:  97.5%;
 
-$margin-bottom-h1: $spacing-unit * 2;
-$margin-top-h2: $spacing-unit * 2;
-$margin-top-h3: $spacing-unit * 1.5;
-$margin-top-h4: $spacing-unit * 1.5;
+$line-height-base:     $line-height-value + ($font-size-value * 1.5%);
+$line-height-smaller:  $line-height-value + ($font-size-value * 1.0%);
+$line-height-smallest: $line-height-value + ($font-size-value * 0.5%);
 
-$line-height-base:   ($line-height-value + 0%) + ($font-size-value * 1.5%);
-$line-height-medium: ($line-height-value + 0%) + ($font-size-value * 1.0%);
-$line-height-small:  ($line-height-value + 0%) + ($font-size-value * 0.5%);
+$margin-bottom-h1: $spacing-unit * 2.0;
+$margin-top-h2:    $spacing-unit * 2.0;
+$margin-top-h3:    $spacing-unit * 1.5;
+$margin-top-h4:    $spacing-unit * 1.5;
+
+$font-family-serif: Georgia, serif;
+$font-family-sans:  Tahoma, sans;
+$font-family-mono:  "Droid Sans Mono", monospace;

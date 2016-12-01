@@ -11,21 +11,21 @@ h4 {
 
 h1 {
     margin-bottom: $margin-bottom-h1;
-    line-height: $line-height-small;
+    line-height: $line-height-smallest;
     font-size: $font-size-h1;
 }
 
 h2 {
     margin-top: $margin-top-h2;
     margin-bottom: $spacing-unit;
-    line-height: $line-height-small;
+    line-height: $line-height-smallest;
     font-size: $font-size-h2;
 }
 
 h3 {
     margin-top: $margin-top-h3;
     margin-bottom: $spacing-unit;
-    line-height: $line-height-medium;
+    line-height: $line-height-smaller;
     font-size: $font-size-h3;
     font-weight: bold;
 }
@@ -55,7 +55,7 @@ dl {
 ol,
 ul {
     list-style-position: outside;
-    margin-left: $spacing-unit * 2;
+    margin-left: $spacing-unit * 2.25;
 }
 
 ol {
@@ -92,16 +92,18 @@ em {
  */
 
 a {
-    color: $color-actionable;
+    display: inline-block;
     text-decoration: none;
+    color: $color-actionable;
 
-    &:hover,
-    &:focus {
-        text-decoration: underline;
+    &:hover, &:focus {
+        background: $color-fill;
+        outline: none;
     }
 
     &:active {
-        text-decoration: none;
+        background: none;
+        outline: none;
     }
 }
 
@@ -118,6 +120,7 @@ blockquote {
     p {
         margin: $spacing-unit/2 0;
         font-style: italic;
+        color: $color-text-lighter;
     }
 }
 
@@ -141,6 +144,7 @@ pre {
 code {
     padding: 0 0.25rem;
     font: $font-size-small $font-family-mono;
+    color: $color-text-lighter;
 }
 
 
@@ -164,7 +168,8 @@ code {
     .img-caption {
         margin: $spacing-unit/2 $spacing-unit*1.5 $spacing-unit/4 $spacing-unit*1.5;
         font-size: $font-size-small;
-        line-height: $line-height-medium;
+        line-height: $line-height-smaller;
+        color: $color-text-lighter;
     }
 }
 
