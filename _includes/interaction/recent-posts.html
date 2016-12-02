@@ -1,0 +1,13 @@
+<div class="recent-posts">
+    <div class="grid-row post-listing">
+        <div class="grid-col span-1">
+            <span class="post-meta">Recent Posts</span>
+        </div>
+
+        <div class="grid-col span-5">
+            {% for post in site.posts limit: site.recent_listing_limit %}
+            <p><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></p>
+            {% endfor %}
+        </div>
+    </div>
+</div>

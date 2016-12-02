@@ -1,11 +1,6 @@
-# Blog Configuration
-# ------------------
-# All values must be populated unless specified otherwise
-
-
-
-
+#
 # Site Config
+#
 
 title: Bookish
     # Shown in header and footer
@@ -17,64 +12,70 @@ baseurl:
 date_format: "%b %d, %Y"
     # Default: "%b %d, %Y"
 
+lang: "en"
+    # HTML lang
+    # Default: "en"
+
 color_theme: light
-    # [light]
+    # { light }
 
 contact:
+    # Can be blank
     name:  Awjin Ahn
     email: awjinahn@gmail.com
-
-    # The following can be blank if N/A:
     github_username:   Awjin
     linkedin_username: awjin
     medium_username:   awjypodgy
     twitter_username:  awjypodgy
 
 
-
-
+#
 # Homepage Config
+#
 
 listing_limit: 2
-    # [blank = no limit]
+    # { blank = no limit }
     # Number of posts shown on the homepage
-    # Remaining posts are kept in Archive
-    # Feature posts do not count against the limit
+    # Remaining posts are listed in Archive
+    # Featured posts do not count against limit
 
 show_dates: true
-    # [true/false]
+    # { true / false }
     # Show the published date next to the title
 
 show_blurbs: true
-    # [true/false]
+    # { true / false }
     # Show the post blurb under the title
     # Blurb can be added in a post's front matter
 
 show_featured: true
-    # [true/false]
-    # Pin featured posts to the top of the homepage
+    # { true / false }
+    # Show featured posts pinned to the top
 
 description: A crisp, readable Jekyll theme.
     # Can be blank
-    # Included in head and footer
+    # Included in head and shown footer
 
 copyright: MIT License
     # Can be blank
-    # Included in footer
+    # Shown in footer
 
 
-
-
+#
 # Post Config
+#
+
+show_recent_posts: true
+    # { true / false }
+    # Show recent posts at the end of each post
 
 recent_listing_limit: 3
-    # Included at the end of the post
-    # Displays links to the most recent posts
+    # Number of recent posts to display
 
 
-
-
+#
 # Build Config
+#
 
 markdown: kramdown
     # Markdown engine

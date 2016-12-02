@@ -2,45 +2,32 @@
 layout: default
 ---
 
-<article class="post">
-    <h1>{{ page.title | escape }}</h1>
-    <div class="col-wrapper post-info">
-        <div class="col-left">
+<article class="grid-row post-content">
+    <div class="grid-col span-6">
+        <h1>{{ page.title | escape }}</h1>
+
+        <div class="post-info">
             <span class="post-meta">
-                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time>
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ page.date | date: site.date_format }}
+                </time>
             </span>
-        </div>
-        <div class="col-right">
+
             <span class="post-meta">
-{% for tag in page.tags %}
+                {% for tag in page.tags %}
                 <a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>
-{% endfor %}
+                {% endfor %}
             </span>
         </div>
-    </div>
-    <div class="post-content">
+
         {{ content }}
     </div>
-    <ul class="post-listing-recent">
-        <li>
-            <div class="col-wrapper">
-                <div class="col-left post-meta">
-                    Recent Posts
-                </div>
-                <div class="col-right">
-                    <ul class="post-listing">
-{% for post in site.posts limit: site.recent_listing_limit %}
-                        <li>
-                            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a><br>
-                        </li>
-{% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </li>
-    </ul>
+</article>
+
+{% if site.show_recent_posts %}
+{% include interaction/recent-posts.html %}
+{% endif %}
 
 {% if site.disqus.shortname %}
-    {% include disqus-comments.html %}
+{% include interaction/disqus-comments.html %}
 {% endif %}
-</article>

@@ -1,21 +1,16 @@
-/*
- *  Homepage
- */
-
 .post-listing {
-    margin: 0;
+    margin-bottom: $spacing-unit;
     font-family: $font-family-sans;
-    list-style: none;
-
-    li {
-        margin-bottom: $spacing-unit;
-    }
 }
 
-.post-listing-featured {
-    @extend .post-listing;
+.post-meta {
+    font-family: $font-family-sans;
+    color: $color-text-lightest;
 
-    margin-bottom: $page-whitespace-small * 0.66;
+    &:not(:last-child) {
+        margin-right: $spacing-unit;
+        margin-bottom: $spacing-unit;
+    }
 }
 
 .post-blurb {
@@ -23,35 +18,27 @@
     margin-bottom: $spacing-unit / 8;
     font: $font-size-small $font-family-serif;
     font-style: italic;
-    line-height: $line-height-smaller;
+    line-height: $line-height-smallest;
     color: $color-text-lighter;
 }
 
 .archive-link {
     margin-top: $page-whitespace-small;
-    text-align: right;
-    font-family: $font-family-sans;
 }
-
-
-
-
-/*
- *  Post
- */
 
 .post-info {
     margin-top: $margin-bottom-h1 / -2;
     margin-bottom: $margin-bottom-h1;
 }
 
-.post-meta {
-    font-family: $font-family-sans;
-    color: $color-text-lightest;
+.recent-posts {
+    margin-top: $page-whitespace-small;
+
+    p {
+        margin-top: 0;
+    }
 }
 
-.post-listing-recent {
-    @extend .post-listing;
-
-    margin-top: $page-whitespace-small;
+.default-row {
+    margin-bottom: $margin-top-h2;
 }

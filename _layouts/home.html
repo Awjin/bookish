@@ -2,88 +2,83 @@
 layout: default
 ---
 
-<div class="post">
 {% assign content_string = content | strip_newlines %}
 
 {% unless content_string == "" %}
+<div class="grid-row default-row">
+    <div class="grid-col">
     {{ content }}
-    <br>
+    </div>
+</div>
 {% endunless %}
 
-    <!-- Featured Posts -->
 
-{% assign featured_count = 0 %}
+<!-- Featured Posts -->
+
+{% assign featured_post_count = 0 %}
 
 {% if site.show_featured %}
-    {% for post in site.posts %}
-        {% if post.featured %}
-            {% assign featured_count = featured_count | plus: 1 %}
+{% for post in site.posts %}
+{% if post.featured %}
+{% assign featured_post_count = featured_post_count | plus: 1 %}
+<div class="grid-row post-listing">
+    <div class="grid-col span-1">
+        <span class="post-meta">Featured &nbsp;<i class="fa fa-star"></i></span>
+    </div>
 
-            {% if featured_count == 1 %}
-    <ul class="post-listing-featured">
-            {% endif %}
-        <li>
-            <div class="col-wrapper">
-                <div class="col-left">
-                    <span class="post-meta">Featured &nbsp;<i class="fa fa-star"></i></span>
-                </div>
-                <div class="col-right">
-                    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            {% if site.show_blurbs and post.blurb %}
-                    <p class="post-blurb">{{ post.blurb | escape }}</p>
-            {% endif %}
-                </div>
-            </div>
-        </li>
+    <div class="grid-col span-5">
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        {% if site.show_blurbs and post.blurb %}
+        <p class="post-blurb">{{ post.blurb | escape }}</p>
         {% endif %}
-    {% endfor %}
+    </div>
+</div>
+{% endif %}
+{% endfor %}
 {% endif %}
 
-{% if featured_count > 0 %}
-    </ul>
-{% endif %}
 
-    <!-- Main Listing -->
+<!-- Regular Posts -->
 
 {% for post in site.posts %}
-    {% assign post_count = post_count | plus: 1 %}
+{% assign post_count = post_count | plus: 1 %}
 {% endfor %}
 
 {% if site.listing_limit == "" %}
-    {% assign listing_limit = post_count %}
+{% assign listing_limit = post_count %}
 {% else %}
-    {% assign listing_limit = site.listing_limit | plus: featured_count) %}
+{% assign listing_limit = site.listing_limit | plus: featured_post_count) %}
 {% endif %}
-    <ul class="post-listing">
-{% for post in site.posts limit: listing_limit %}
-    {% unless post.featured %}
-        <li>
-            <div class="col-wrapper">
-                <div class="col-left">
-        {% if site.show_dates %}
-                    <span class="post-meta">{{ post.date | date: site.date_format }}</span>
-        {% endif %}
-                </div>
-                <div class="col-right">
-                    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        {% if site.show_blurbs and post.blurb %}
-                    <p class="post-blurb">{{ post.blurb | escape }}</p>
-        {% endif %}
-                </div>
-            </div>
-        </li>
-    {% endunless %}
-{% endfor %}
-    </ul>
 
-    <!-- Archive Link -->
+{% for post in site.posts limit: listing_limit %}
+{% unless post.featured %}
+<div class="grid-row post-listing">
+    <div class="grid-col span-1">
+        {% if site.show_dates %}
+        <span class="post-meta">{{ post.date | date: site.date_format }}</span>
+        {% endif %}
+    </div>
+
+    <div class="grid-col span-5">
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        {% if site.show_blurbs and post.blurb %}
+        <p class="post-blurb">{{ post.blurb | escape }}</p>
+        {% endif %}
+    </div>
+</div>
+{% endunless %}
+{% endfor %}
+
+
+<!-- Archive Link -->
 
 {% if listing_limit < post_count %}
-    <div class="col-wrapper archive-link">
-        <div class="col-left"></div>
-        <div class="col-right">
-            <a href="archive">Archive <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-        </div>
+<div class="grid-row post-listing archive-link align-right">
+    <div class="grid-col"></div>
+    <div class="grid-col">
+        <a href={{"archive" | relative_url }}>
+            Archive <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+        </a>
     </div>
-{% endif %}
 </div>
+{% endif %}

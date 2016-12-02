@@ -2,36 +2,58 @@
  *  Base
  */
 
-html,
 body {
-    width: 100%;
     background: $color-background;
     font: $font-size-base $font-family-serif;
     color: $color-text-base;
-}
-
-body {
-    max-width: $content-width;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
     line-height: $line-height-base;
+    padding: 2.5rem 1.5rem 3.5rem 1.5rem;
 }
 
-.page-content {
-    padding-top: $page-whitespace-small;
+
+
+
+/*
+ *  Grid
+ */
+
+.grid {
+    width: 100%;
+    max-width: $content-width;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.col-wrapper {
-    overflow: hidden;
+.grid-col {
+    margin-bottom: $spacing-unit / 4;
 }
 
-.col-left,
-.col-right {
-    display: block;
-}
+@media all and (min-width: $content-width) {
+    .grid-row {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
 
-.col-right {
-    margin-top: $spacing-unit / 8;
+        margin-right: - $spacing-unit;
+        margin-left: - $spacing-unit;
+        border-spacing: $spacing-unit 0;
+    }
+
+    .grid-col {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .span-1 { width: 16.66%; }
+    .span-2 { width: 33.33%; }
+    .span-3 { width: 49.99%; }
+    .span-4 { width: 66.33%; }
+    .span-5 { width: 82.66%; }
+    .span-6 { width: 99.99%; }
+
+    .align-right {
+        text-align: right;
+    }
 }
 
 
@@ -43,14 +65,15 @@ body {
 
 .site-header {
     font-family: $font-family-sans;
+    margin-bottom: $page-whitespace-small;
 
-    .col-right {
-        padding-top: $spacing-unit / 2;
+    .grid-col {
+        margin-bottom: $spacing-unit / 2;
     }
 
     a {
         &:not(:last-child) {
-            margin-right: 1.5rem;
+            margin-right: $spacing-unit;
         }
     }
 
@@ -75,53 +98,28 @@ body {
     font-family: $font-family-sans;
     color: $color-text-lightest;
 
-    .col-right {
-        padding-top: $spacing-unit / 4;
+    .grid-col {
+        margin-bottom: $spacing-unit * 1.5;
     }
 
     p {
-        margin: $spacing-unit/2 0;
-    }
-
-    .fa {
-        padding: 0.5rem 0.5rem 0.75rem 0.5rem;
-        font-size: $font-size-large;
-        margin-top: -0.25rem;
-
-        &:first-child {
-            margin-left: -0.5rem;
-        }
-
-        &:last-child {
-            margin-right: -0.5rem;
-        }
-    }
-}
-
-
-
-
-/*
- *  Media Queries
- */
-
-@media all and (min-width: $content-width) {
-    .col-left {
-        float: left;
-        margin-right: 1rem;
-    }
-
-    .col-right {
-        overflow: hidden;
         margin-top: 0;
-        padding: 0 0.33rem;
+        margin-bottom: $spacing-unit / 2;
     }
 
-    .site-header,
-    .site-footer {
-        .col-right {
-            padding-top: 0;
-            text-align: right;
+    .contact-buttons {
+        a {
+            margin-top: -0.2rem;
+            padding: 0.3rem 0.4rem 0.4rem 0.4rem;
+            font-size: $font-size-large;
+
+            &:first-child {
+                margin-left: -0.4rem;
+            }
+
+            &:last-child {
+                margin-right: -0.4rem;
+            }
         }
     }
 }
