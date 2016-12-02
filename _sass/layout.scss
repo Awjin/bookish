@@ -5,7 +5,7 @@
 body {
     background: $color-background;
     font: $font-size-base $font-family-serif;
-    color: $color-text-base;
+    color: $color-base;
     line-height: $line-height-base;
     padding: 2.5rem 1.5rem 3rem 1.5rem;
 }
@@ -79,11 +79,14 @@ body {
 
     .site-title {
         font-size: $font-size-large;
-    }
-}
+        font-weight: bold;
+        color: $color-lighter;
 
-.site-title {
-    font-weight: bold;
+        &:hover,
+        &:focus {
+            color: $color-actionable;
+        }
+    }
 }
 
 
@@ -96,7 +99,7 @@ body {
 .site-footer {
     margin-top: $page-whitespace-large;
     font-family: $font-family-sans;
-    color: $color-text-lightest;
+    color: $color-lightest;
 
     .grid-col {
         margin-bottom: $spacing-unit * 1.5;
