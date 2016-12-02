@@ -17,14 +17,14 @@ h1 {
 
 h2 {
     margin-top: $margin-top-h2;
-    margin-bottom: $spacing-unit;
+    margin-bottom: $whitespace-base;
     line-height: $line-height-smallest;
     font-size: $font-size-h2;
 }
 
 h3 {
     margin-top: $margin-top-h3;
-    margin-bottom: $spacing-unit;
+    margin-bottom: $whitespace-base;
     line-height: $line-height-smaller;
     font-size: $font-size-h3;
     font-weight: bold;
@@ -32,7 +32,7 @@ h3 {
 
 h4 {
     margin-top: $margin-top-h4;
-    margin-bottom: $spacing-unit;
+    margin-bottom: $whitespace-base;
     line-height: $line-height-smaller;
     font-size: $font-size-h4;
     font-style: italic;
@@ -49,14 +49,14 @@ p,
 ol,
 ul,
 dl {
-    margin-top: $spacing-unit;
-    margin-bottom: $spacing-unit;
+    margin-top: $whitespace-base;
+    margin-bottom: $whitespace-base;
 }
 
 ol,
 ul {
     list-style-position: outside;
-    margin-left: $spacing-unit * 2.25;
+    margin-left: $whitespace-base * 2.25;
 }
 
 ol {
@@ -73,7 +73,7 @@ li {
 
     > ul,
     > ol {
-        margin: 0 0 $spacing-unit/2 $spacing-unit*1.5;
+        margin: 0 0 $whitespace-base/2 $whitespace-base*1.5;
     }
 }
 
@@ -104,6 +104,37 @@ a {
     }
 }
 
+.img-link {
+    &:hover,
+    &:focus {
+        border-color: $color-background;
+    }
+}
+
+
+
+
+/*
+ *  Images
+ */
+
+.img-wrapper {
+    display: block;
+    margin: $whitespace-base*2 0 $whitespace-base*2 0;
+
+    img {
+        width: 100%;
+    }
+
+    .img-caption {
+        margin-top: $whitespace-base / 2;
+        font-size: $font-size-small;
+        line-height: $line-height-smallest;
+        color: $color-lighter;
+        font-style: italic;
+    }
+}
+
 
 
 
@@ -112,11 +143,11 @@ a {
  */
 
 blockquote {
-    padding-left: $spacing-unit * 1.25;
+    padding-left: $whitespace-base * 1.25;
 
     p {
-        margin-top: $spacing-unit / 2;
-        margin-bottom: $spacing-unit / 2;
+        margin-top: $whitespace-base / 2;
+        margin-bottom: $whitespace-base / 2;
         font-style: italic;
         color: $color-lighter;
     }
@@ -131,8 +162,8 @@ blockquote {
 
 pre {
     overflow-x: auto;
-    padding-bottom: $spacing-unit / 8;
-    padding-left: $spacing-unit * 1.25;
+    padding-bottom: $whitespace-base / 8;
+    padding-left: $whitespace-base * 1.25;
 
     > code {
         padding: 0;
@@ -149,40 +180,14 @@ code {
 
 
 /*
- *  Images
- */
-
-.img-wrapper {
-    display: inline-block;
-    max-width: 100%;
-    margin: $spacing-unit/2 0 $spacing-unit/4 0;
-
-    img {
-        display: inline-block;
-        max-width: 100%;
-        border-radius: 4px;
-    }
-
-    .img-caption {
-        margin: $spacing-unit/2 $spacing-unit*1.5 $spacing-unit/4 $spacing-unit*1.5;
-        font-size: $font-size-small;
-        line-height: $line-height-smallest;
-        color: $color-lighter;
-    }
-}
-
-
-
-
-/*
  *  Lines
  */
 
 hr {
     width: 100%;
     height: 1px;
-    margin-top: $margin-top-h2 + ($spacing-unit / 2);
-    margin-top: $margin-top-h2 + ($spacing-unit / 2);
+    margin-top: $whitespace-large;
+    margin-bottom: $whitespace-large;
     border: none;
     background: $color-line;
 }

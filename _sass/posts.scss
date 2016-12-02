@@ -1,5 +1,5 @@
 .post-listing {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $whitespace-base;
     font-family: $font-family-sans;
 }
 
@@ -8,14 +8,14 @@
     color: $color-lightest;
 
     &:not(:last-child) {
-        margin-right: $spacing-unit;
-        margin-bottom: $spacing-unit;
+        margin-right: $whitespace-base;
+        margin-bottom: $whitespace-base;
     }
 }
 
 .post-blurb {
-    margin-top: $spacing-unit / 4;
-    margin-bottom: $spacing-unit / 8;
+    margin-top: $whitespace-base / 4;
+    margin-bottom: $whitespace-base / 8;
     font: $font-size-small $font-family-serif;
     font-style: italic;
     line-height: $line-height-smallest;
@@ -23,7 +23,7 @@
 }
 
 .archive-link {
-    margin-top: $page-whitespace-small;
+    margin-top: $whitespace-large;
 }
 
 .post-info {
@@ -32,7 +32,7 @@
 }
 
 .recent-posts {
-    margin-top: $page-whitespace-small;
+    margin-top: $whitespace-large;
     color: $color-lighter;
 
     p {

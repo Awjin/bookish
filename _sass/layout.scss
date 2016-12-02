@@ -1,19 +1,4 @@
 /*
- *  Base
- */
-
-body {
-    background: $color-background;
-    font: $font-size-base $font-family-serif;
-    color: $color-base;
-    line-height: $line-height-base;
-    padding: 2.5rem 1.5rem 3rem 1.5rem;
-}
-
-
-
-
-/*
  *  Grid
  */
 
@@ -25,18 +10,18 @@ body {
 }
 
 .grid-col {
-    margin-bottom: $spacing-unit / 4;
+    margin-bottom: $whitespace-base / 4;
 }
 
-@media all and (min-width: $content-width + $spacing-unit*2) {
+@media all and (min-width: $content-width + 3rem) {
     .grid-row {
         display: table;
         table-layout: fixed;
         width: 100%;
 
-        margin-right: $spacing-unit * -1;
-        margin-left: $spacing-unit * -1;
-        border-spacing: $spacing-unit 0;
+        margin-right: $whitespace-base * -1;
+        margin-left: $whitespace-base * -1;
+        border-spacing: $whitespace-base 0;
     }
 
     .grid-col {
@@ -60,69 +45,59 @@ body {
 
 
 /*
- *  Header
+ *  Containers
  */
 
-.site-header {
-    font-family: $font-family-sans;
-    margin-bottom: $page-whitespace-small;
-
-    .grid-col {
-        margin-bottom: $spacing-unit / 2;
-    }
-
-    a {
-        &:not(:last-child) {
-            margin-right: $spacing-unit;
-        }
-    }
-
-    .site-title {
-        font-size: $font-size-large;
-        font-weight: bold;
-        color: $color-lighter;
-
-        &:hover,
-        &:focus {
-            color: $color-actionable;
-        }
-    }
+body {
+    padding: 2.5rem 1.5rem 3rem 1.5rem;
+    background: $color-background;
+    font: $font-size-base $font-family-serif;
+    line-height: $line-height-base;
+    color: $color-base;
 }
 
-
-
-
-/*
- *  Footer
- */
-
+.site-header,
 .site-footer {
-    margin-top: $page-whitespace-large;
     font-family: $font-family-sans;
     color: $color-lightest;
 
     .grid-col {
-        margin-bottom: $spacing-unit * 1.5;
+        margin-bottom: $whitespace-base / 2;
     }
 
-    p {
-        margin-top: 0;
-        margin-bottom: $spacing-unit / 2;
+    .nav-text {
+        display: block;
+        margin-bottom: $whitespace-base / 2;
+        line-height: $line-height-base;
     }
 
-    .contact-buttons {
-        a {
-            margin-top: -0.15rem;
-            padding: 0.3rem 0.5rem 0.5rem 0.5rem;
-            font-size: $font-size-large;
+    .nav-large {
+        font-size: $font-size-large;
+        color: $color-lighter;
+    }
 
-            &:first-child {
-                margin-left: -0.5rem;
-            }
-
-            &:last-child {
-                margin-right: -0.5rem;
-            }
+    a {
+        &:not(:last-child) {
+            margin-right: $whitespace-base;
         }
+    }
+}
+
+.site-header {
+    margin-bottom: $whitespace-large;
+}
+
+.site-footer {
+    margin-top: $whitespace-large;
+}
+
+.site-title,
+.contact-button {
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+        color: $color-actionable;
+        border-color: $color-background;
     }
 }

@@ -1,12 +1,11 @@
 ---
 ---
 
-$font-size-value:       15;
-$line-height-value:     145;
-$content-width:         36rem;
-$spacing-unit:          1rem;
-$page-whitespace-small: $spacing-unit * 4;
-$page-whitespace-large: $spacing-unit * 6;
+$font-size-value:   15;
+$line-height-value: 145;
+$content-width:     37rem;
+$whitespace-base:      1rem;
+$whitespace-large:     $whitespace-base * 4;
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -23,10 +22,10 @@ $line-height-base:     $line-height-value + ($font-size-value * 1.5%);
 $line-height-smaller:  $line-height-value + ($font-size-value * 1.0%);
 $line-height-smallest: $line-height-value + ($font-size-value * 0.5%);
 
-$margin-bottom-h1: $spacing-unit * 2.0;
-$margin-top-h2:    $spacing-unit * 2.0;
-$margin-top-h3:    $spacing-unit * 1.5;
-$margin-top-h4:    $spacing-unit * 1.5;
+$margin-bottom-h1: $whitespace-base * 2.0;
+$margin-top-h2:    $whitespace-base * 2.0;
+$margin-top-h3:    $whitespace-base * 1.5;
+$margin-top-h4:    $whitespace-base * 1.5;
 
 $font-family-serif: Georgia, serif;
 $font-family-sans:  Tahoma, sans;

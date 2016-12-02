@@ -1,13 +1,35 @@
+<!--{% raw  %}
+
+    Arguments (as strings):
+        src     - path to image
+        width   - if blank, auto-width up to 100%
+        href    - if blank, links to itself
+        alt     - if needed
+        caption - if needed
+
+    Example:
+        {% include components/img.html
+            src="assets/screenshot.png"
+            width="50%"
+            href="website.com"
+            alt="link to website"
+            caption="This is a screenshot of website.com" %}
+
+{% endraw %}-->
+
 {% if include.href %}
-{% assign href_string = "{{ include.href | relative_url }}" %}
+{% assign href_string = include.href | escape %}
 {% else %}
-{% assign href_string = "{{ include.src | relative_url }}" %}
+{% assign href_string = include.src | relative_url | escape %}
 {% endif %}
 
-<div class="img-wrapper" {% if include.width %} style="width: {{ include.width }}" {% endif %}>
-    <a href={{ href_string }}>
-        <img src="{{ include.src | relative_url }}" {% if include.alt %} alt="{{ include.alt | escape }}" {% endif %} />
+<div class="img-wrapper">
+    <a href="{{ href_string }}" class="img-link">
+        <img src="{{ include.src | relative_url | escape }}"
+        {% if include.width %} style="width: {{ include.width | escape }}" {% endif %}
+        {% if include.alt %} alt="{{ include.alt | escape }}" {% endif %} />
     </a>
+
     {% if include.caption %}
     <p class="img-caption">{{ include.caption | escape }}</p>
     {% endif %}
