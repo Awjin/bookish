@@ -10,7 +10,7 @@
 }
 
 .grid-col {
-    margin-bottom: $whitespace-base / 4;
+    margin-bottom: $whitespace-base / 2;
 }
 
 @media all and (min-width: $content-width + 3rem) {
@@ -61,13 +61,9 @@ body {
     font-family: $font-family-sans;
     color: $color-lightest;
 
-    .grid-col {
-        margin-bottom: $whitespace-base / 2;
-    }
-
     .nav-text {
         display: block;
-        margin-bottom: $whitespace-base / 2;
+        margin-bottom: $whitespace-base;
         line-height: $line-height-base;
     }
 
@@ -84,11 +80,11 @@ body {
 }
 
 .site-header {
-    margin-bottom: $whitespace-large;
+    margin-bottom: $whitespace-larger;
 }
 
 .site-footer {
-    margin-top: $whitespace-large;
+    margin-top: $whitespace-largest;
 }
 
 .site-title,

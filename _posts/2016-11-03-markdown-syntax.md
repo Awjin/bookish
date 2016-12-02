@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Markdown Syntax
+tags: Long
+featured: true
 ---
 
 *   [Overview](#overview)
