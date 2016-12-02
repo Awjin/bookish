@@ -24,7 +24,7 @@ h2 {
 
 h3 {
     margin-top: $margin-top-h3;
-    margin-bottom: $whitespace-base;
+    margin-bottom: $whitespace-base * 0.75;
     line-height: $line-height-smaller;
     font-size: $font-size-h3;
     font-weight: bold;
@@ -32,7 +32,7 @@ h3 {
 
 h4 {
     margin-top: $margin-top-h4;
-    margin-bottom: $whitespace-base;
+    margin-bottom: $whitespace-base * 0.75;
     line-height: $line-height-smaller;
     font-size: $font-size-h4;
     font-style: italic;
@@ -49,14 +49,18 @@ p,
 ol,
 ul,
 dl {
-    margin-top: $whitespace-base;
     margin-bottom: $whitespace-base;
+}
+
+p + ol,
+p + ul {
+    margin-top: $whitespace-base * -0.66;
 }
 
 ol,
 ul {
     list-style-position: outside;
-    margin-left: $whitespace-base * 2.25;
+    margin-left: $whitespace-base * 2.5;
 }
 
 ol {
@@ -64,16 +68,17 @@ ol {
 }
 
 ul {
-    list-style-type: disc;
+    list-style-type: circle;
 }
 
 li {
-    margin-top: 0.1rem;
+    margin-top: $whitespace-base / 8;
     padding-left: 0;
 
     > ul,
     > ol {
-        margin: 0 0 $whitespace-base/2 $whitespace-base*1.5;
+        margin-left: $whitespace-base * 2;
+        margin-bottom: 0;
     }
 }
 
@@ -143,7 +148,8 @@ a {
  */
 
 blockquote {
-    padding-left: $whitespace-base * 1.25;
+    margin-bottom: $whitespace-base;
+    padding-left: $whitespace-base * 1.5;
 
     p {
         margin-top: $whitespace-base / 2;
@@ -162,8 +168,8 @@ blockquote {
 
 pre {
     overflow-x: auto;
-    padding-bottom: $whitespace-base / 8;
-    padding-left: $whitespace-base * 1.25;
+    margin-bottom: $whitespace-base;
+    padding-left: $whitespace-base * 1.5;
 
     > code {
         padding: 0;
@@ -186,8 +192,8 @@ code {
 hr {
     width: 100%;
     height: 1px;
-    margin-top: $whitespace-larger;
-    margin-bottom: $whitespace-larger;
+    margin-top: $margin-top-h2 + $whitespace-base/2;
+    margin-bottom: $margin-top-h2;
     border: none;
     background: $color-line;
 }

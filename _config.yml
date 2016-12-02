@@ -11,12 +11,16 @@ baseurl:
 
 date_format: "%Y/%m/%d"
 
-lang: "en"
-    # HTML lang
-    # Default: "en"
-
 color_theme: light
     # { light }
+
+copyright: MIT, © 2016 Awjin Ahn
+    # Can be blank
+    # Shown in footer
+
+description: A crisp, readable Jekyll theme.
+    # Can be blank
+    # Included in head and shown in footer
 
 contact:
     # Can be blank
@@ -27,6 +31,10 @@ contact:
     medium_username:   awjypodgy
     twitter_username:  awjypodgy
 
+lang: "en"
+    # HTML lang
+    # Default: "en"
+
 
 #
 # Homepage Config
@@ -36,7 +44,7 @@ listing_limit: 2
     # { blank = no limit }
     # Number of posts shown on the homepage
     # Remaining posts are listed in Archive
-    # Featured posts do not count against limit
+    # Pinned posts do not count against limit
 
 show_dates: true
     # { true / false }
@@ -47,17 +55,9 @@ show_blurbs: true
     # Show the post blurb under the title
     # Blurb can be added in a post's front matter
 
-show_featured: true
+show_pinned: true
     # { true / false }
-    # Show featured posts pinned to the top
-
-description: A crisp, readable Jekyll theme.
-    # Can be blank
-    # Included in head and shown footer
-
-copyright: MIT License
-    # Can be blank
-    # Shown in footer
+    # Show pinned posts at the top
 
 
 #

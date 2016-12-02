@@ -6,7 +6,7 @@ layout: default
     <div class="grid-col span-6">
         <h1>{{ page.title | escape }}</h1>
 
-        <div class="post-info">
+        <div class="post-subhead">
             <span class="post-meta">
                 <time datetime="{{ page.date | date_to_xmlschema }}">
                     {{ page.date | date: site.date_format }}
@@ -15,7 +15,7 @@ layout: default
 
             <span class="post-meta">
                 {% for tag in page.tags %}
-                <a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>
+                <a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},&nbsp;{% endunless %}</a>
                 {% endfor %}
             </span>
         </div>

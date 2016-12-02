@@ -32,8 +32,8 @@
     .span-1 { width: 16.66%; }
     .span-2 { width: 33.33%; }
     .span-3 { width: 49.99%; }
-    .span-4 { width: 66.33%; }
-    .span-5 { width: 82.66%; }
+    .span-4 { width: 66.66%; }
+    .span-5 { width: 82.33%; }
     .span-6 { width: 99.99%; }
 
     .align-right {
@@ -76,24 +76,31 @@ body {
         &:not(:last-child) {
             margin-right: $whitespace-base;
         }
+                    color: $color-actionable;
     }
 }
 
 .site-header {
     margin-bottom: $whitespace-larger;
+
+    .site-title {
+        font-weight: bold;
+
+        &:hover,
+        &:focus {
+            color: $color-actionable;
+        }
+    }
 }
 
 .site-footer {
     margin-top: $whitespace-largest;
-}
 
-.site-title,
-.contact-button {
-    font-weight: bold;
-
-    &:hover,
-    &:focus {
-        color: $color-actionable;
-        border-color: $color-background;
+    .contact-button {
+        &:hover,
+        &:focus {
+            color: $color-actionable;
+            border-color: $color-background;
+        }
     }
 }

@@ -13,17 +13,17 @@ layout: default
 {% endunless %}
 
 
-<!-- Featured Posts -->
+<!-- Pinned Posts -->
 
-{% assign featured_post_count = 0 %}
+{% assign pinned_post_count = 0 %}
 
-{% if site.show_featured %}
+{% if site.show_pinned %}
 {% for post in site.posts %}
-{% if post.featured %}
-{% assign featured_post_count = featured_post_count | plus: 1 %}
+{% if post.pinned %}
+{% assign pinned_post_count = pinned_post_count | plus: 1 %}
 <div class="grid-row post-listing">
     <div class="grid-col span-1">
-        <span class="post-meta">Featured &nbsp;<i class="fa fa-star"></i></span>
+        <span class="post-meta">Pinned &nbsp;<i class="fa fa-star"></i></span>
     </div>
 
     <div class="grid-col span-5">
@@ -47,11 +47,11 @@ layout: default
 {% if site.listing_limit == "" %}
 {% assign listing_limit = post_count %}
 {% else %}
-{% assign listing_limit = site.listing_limit | plus: featured_post_count) %}
+{% assign listing_limit = site.listing_limit | plus: pinned_post_count) %}
 {% endif %}
 
 {% for post in site.posts limit: listing_limit %}
-{% unless post.featured %}
+{% unless post.pinned %}
 <div class="grid-row post-listing">
     <div class="grid-col span-1">
         {% if site.show_dates %}

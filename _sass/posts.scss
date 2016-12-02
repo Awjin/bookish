@@ -26,20 +26,17 @@
     margin-top: $whitespace-larger;
 }
 
-.post-info {
-    margin-top: $margin-bottom-h1 / -2;
-    margin-bottom: $margin-bottom-h1;
-}
-
-.recent-posts {
-    margin-top: $whitespace-larger;
-    color: $color-lighter;
-
-    p {
-        margin-top: 0;
-    }
+.post-subhead {
+    margin-top: $margin-bottom-h1 * -0.75;
+    margin-bottom: $margin-bottom-h1 * 0.75;
 }
 
 .default-row {
     margin-bottom: $margin-top-h2;
+}
+
+.recent-posts {
+    margin-top: $whitespace-largest;
+    margin-bottom: $whitespace-larger - $whitespace-largest;
+    color: $color-lightest;
 }
