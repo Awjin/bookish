@@ -13,7 +13,7 @@ Contents:
   - type
   - color
 
-Bound into a simple [grid layout](http://mdo.github.io/table-grid/).
+Bound by a simple [grid layout](http://mdo.github.io/table-grid/).
 
 <br>
-[Source code.](https://github.com/awjin/bookish)
+[See on Github](https://github.com/awjin/bookish).

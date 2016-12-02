@@ -16,9 +16,7 @@ header_rank: 2
 
         <p class="post-meta">
             {% for tag in tags %}
-            <a href="{{ "topics/#" | append: tag | relative_url }}">
-                {{ tag }}{% unless forloop.last %},&nbsp;{% endunless %}
-            </a>
+            <a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>&nbsp;
             {% endfor %}
         </p>
     </div>
