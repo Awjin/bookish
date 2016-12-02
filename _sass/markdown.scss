@@ -33,6 +33,7 @@ h3 {
 h4 {
     margin-top: $margin-top-h4;
     margin-bottom: $spacing-unit;
+    line-height: $line-height-smaller;
     font-size: $font-size-h4;
     font-style: italic;
 }
@@ -110,7 +111,7 @@ a {
  */
 
 blockquote {
-    padding-left: $spacing-unit * 1.5;
+    padding-left: $spacing-unit * 1.25;
 
     p {
         margin-top: $spacing-unit / 2;
@@ -129,8 +130,8 @@ blockquote {
 
 pre {
     overflow-x: auto;
-    padding-bottom: $spacing-unit / 4;
-    padding-left: $spacing-unit * 1.5;
+    padding-bottom: $spacing-unit / 8;
+    padding-left: $spacing-unit * 1.25;
 
     > code {
         padding: 0;

@@ -7,7 +7,7 @@ body {
     font: $font-size-base $font-family-serif;
     color: $color-text-base;
     line-height: $line-height-base;
-    padding: 2.5rem 1.5rem 3.5rem 1.5rem;
+    padding: 2.5rem 1.5rem 3rem 1.5rem;
 }
 
 
@@ -28,14 +28,14 @@ body {
     margin-bottom: $spacing-unit / 4;
 }
 
-@media all and (min-width: $content-width) {
+@media all and (min-width: $content-width + $spacing-unit*2) {
     .grid-row {
         display: table;
         table-layout: fixed;
         width: 100%;
 
-        margin-right: - $spacing-unit;
-        margin-left: - $spacing-unit;
+        margin-right: $spacing-unit * -1;
+        margin-left: $spacing-unit * -1;
         border-spacing: $spacing-unit 0;
     }
 
@@ -109,16 +109,16 @@ body {
 
     .contact-buttons {
         a {
-            margin-top: -0.2rem;
-            padding: 0.3rem 0.4rem 0.4rem 0.4rem;
+            margin-top: -0.15rem;
+            padding: 0.3rem 0.5rem 0.5rem 0.5rem;
             font-size: $font-size-large;
 
             &:first-child {
-                margin-left: -0.4rem;
+                margin-left: -0.5rem;
             }
 
             &:last-child {
-                margin-right: -0.4rem;
+                margin-right: -0.5rem;
             }
         }
     }
