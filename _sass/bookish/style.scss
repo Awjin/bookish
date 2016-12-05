@@ -1,0 +1,52 @@
+body {
+    box-sizing: content-box;
+    max-width: $max-content-width;
+    margin: ($leading * 4) auto ($leading * 2) auto;
+    padding: 0 ($leading * 1.25);
+}
+
+.site-footer {
+    margin-top: $leading * 8;
+    text-align: right;
+
+    a {
+        margin-left: $leading/2;
+    }
+}
+
+.post-listing {
+    margin-bottom: $leading * 1.5;
+}
+
+.post-listing-title {
+    margin-bottom: $leading / 4;
+    line-height: 1.4;
+}
+
+.post-info {
+    margin-bottom: $whitespace;
+}
+
+.label {
+    color: $color-lightest;
+}
+
+.archive-link {
+    display: inline-block;
+    margin-top: $leading;
+}
+
+.img-wrapper {
+    display: block;
+    margin: 2rem 0;
+
+    img {
+        width: 100%;
+    }
+
+    .img-caption {
+        margin-top: 0.5rem;
+        color: $color-lighter;
+        font-style: italic;
+    }
+}

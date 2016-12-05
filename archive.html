@@ -14,19 +14,15 @@ header_rank: 1
 
 {% if forloop.first %}
 <h2>{{ curr_year }}</h2>
+<ul>
 {% endif %}
-
-<div class="grid-row post-listing archive">
-    <div class="grid-col span-1">
-        <span class="post-meta">{{ post.date | date: site.date_format }}</span>
-    </div>
-
-    <div class="grid-col span-5">
+    <li>
         <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    </div>
-</div>
-
+        <span class="label">{{ post.date | date: site.date_format }}</span>
+    </li>
 {% if next_year != curr_year %}
+</ul>
 <h2>{{ next_year }}</h2>
+<ul>
 {% endif %}
 {% endfor %}

@@ -3,7 +3,8 @@
 #
 
 title: Bookish
-    # Shown in header
+name:  Awjin Ahn
+email: awjinahn@gmail.com
 
 baseurl:
     # Can be blank
@@ -14,22 +15,9 @@ date_format: "%Y/%m/%d"
 color_theme: light
     # { light }
 
-copyright: MIT, © 2016 Awjin Ahn
-    # Can be blank
-    # Shown in footer
-
 description: A crisp, readable Jekyll theme.
     # Can be blank
-    # Included in head and shown in footer
-
-contact:
-    # Can be blank
-    name:  Awjin Ahn
-    email: awjinahn@gmail.com
-    github_username:   Awjin
-    linkedin_username: awjin
-    medium_username:   awjypodgy
-    twitter_username:  awjypodgy
+    # Included in head for SEO
 
 lang: "en"
     # HTML lang
@@ -50,26 +38,9 @@ show_dates: true
     # { true / false }
     # Show the published date next to the title
 
-show_blurbs: true
-    # { true / false }
-    # Show the post blurb under the title
-    # Blurb can be added in a post's front matter
-
 show_pinned: true
     # { true / false }
     # Show pinned posts at the top
-
-
-#
-# Post Config
-#
-
-show_recent_posts: true
-    # { true / false }
-    # Show recent posts at the end of each post
-
-recent_listing_limit: 3
-    # Number of recent posts to display
 
 
 #

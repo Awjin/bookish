@@ -2,7 +2,6 @@
 layout: post
 title: Markdown Syntax
 tags: Long
-blurb: Text taken from Daring Fireball's Markdown test suite, then rendered in the Bookish theme.
 pinned: true
 ---
 

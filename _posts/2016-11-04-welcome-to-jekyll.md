@@ -3,7 +3,6 @@ layout: post
 title: Welcome to Jekyll
 tags: Demo
 pinned: true
-blurb: "This post is pinned to the homepage. To pin a post, add `pinned: true` to the frontmatter. Next, write a blurb on how you pinned that post, and add it to the frontmatter, too (as `blurb:`)."
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

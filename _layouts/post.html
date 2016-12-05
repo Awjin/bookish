@@ -2,32 +2,21 @@
 layout: default
 ---
 
-<article class="grid-row post-content">
-    <div class="grid-col span-6">
-        <h1>{{ page.title | escape }}</h1>
+<article>
+    <h1>{{ page.title | escape }}</h1>
 
-        <div class="post-subhead">
-            <span class="post-meta">
-                <time datetime="{{ page.date | date_to_xmlschema }}">
-                    {{ page.date | date: site.date_format }}
-                </time>
-            </span>
+    <section class="post-info label">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: site.date_format }}
+        </time>
 
-            <span class="post-meta">
-                {% for tag in page.tags %}
-                <a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},&nbsp;{% endunless %}</a>
-                {% endfor %}
-            </span>
-        </div>
+        {% for tag in page.tags %}
+        {% if forloop.first %}
+        &nbsp;in
+        {% endif %}
+        &nbsp;<a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>
+        {% endfor %}
+    </section>
 
-        {{ content }}
-    </div>
+    {{ content }}
 </article>
-
-{% if site.show_recent_posts %}
-{% include interaction/recent-posts.html %}
-{% endif %}
-
-{% if site.disqus.shortname %}
-{% include interaction/disqus-comments.html %}
-{% endif %}

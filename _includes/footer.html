@@ -1,0 +1,9 @@
+<footer class="site-footer">
+    <p>
+        <a href="{{ "/" | relative_url }}">Home</a>
+        {% assign pages = site.pages | where: "header_page", "true" | sort: "header_rank" %}
+        {% for page in pages %}
+        <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+        {% endfor %}
+    </p>
+</footer>

@@ -10,38 +10,24 @@ header_rank: 2
 {% assign tags = tags | split: ',' | sort %}
 {% assign posts = site.posts %}
 
-<div class="grid-row default-row">
-    <div class="grid-col">
-        <h1>{{ page.title | escape }}</h1>
+<h1>{{ page.title | escape }}</h1>
 
-        <p class="post-meta">
-            {% for tag in tags %}
-            <a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>&nbsp;
-            {% endfor %}
-        </p>
-    </div>
-</div>
+<p class="label">
+    {% for tag in tags %}
+    <a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>&nbsp;
+    {% endfor %}
+</p>
 
 {% for tag in tags %}
-<div class="grid">
-    <h2 id="{{ tag }}">{{ tag }}</h2>
-
+<h2 id="{{ tag }}">{{ tag }}</h2>
+<ul>
     {% for post in posts %}
     {% if post.tags contains tag %}
-    <div class="grid-row post-listing topics">
-        <div class="grid-col span-1">
-            <span class="post-meta">
-                {{ post.date | date: site.date_format }}
-            </span>
-        </div>
-
-        <div class="grid-col span-5">
-            <a class="post-title" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-            </a>
-        </div>
-    </div>
+    <li>
+        <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <span class="label">{{ post.date | date: site.date_format }}</span>
+    </li>
     {% endif %}
     {% endfor %}
-</div>
+</ul>
 {% endfor %}

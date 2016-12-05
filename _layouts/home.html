@@ -1,15 +1,12 @@
 ---
 layout: default
+home: true
 ---
 
 {% assign content_string = content | strip_newlines %}
 
 {% unless content_string == "" %}
-<div class="grid-row default-row">
-    <div class="grid-col">
-    {{ content }}
-    </div>
-</div>
+{{ content }}
 {% endunless %}
 
 
@@ -21,18 +18,13 @@ layout: default
 {% for post in site.posts %}
 {% if post.pinned %}
 {% assign pinned_post_count = pinned_post_count | plus: 1 %}
-<div class="grid-row post-listing">
-    <div class="grid-col span-1">
-        <span class="post-meta">Pinned &nbsp;<i class="fa fa-star"></i></span>
-    </div>
-
-    <div class="grid-col">
+<section class="post-listing">
+    <p class="post-listing-title">
         <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        {% if site.show_blurbs and post.blurb %}
-        <p class="post-blurb">{{ post.blurb | escape }}</p>
-        {% endif %}
-    </div>
-</div>
+    </p>
+
+    <p class="label">Pinned</p>
+</section>
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -52,32 +44,18 @@ layout: default
 
 {% for post in site.posts limit: listing_limit %}
 {% unless site.show_pinned and post.pinned %}
-<div class="grid-row post-listing">
-    {% if site.show_dates %}
-    <div class="grid-col span-1">
-        <span class="post-meta">{{ post.date | date: site.date_format }}</span>
-    </div>
-    {% endif %}
-
-    <div class="grid-col">
+<section class="post-listing">
+    <p class="post-listing-title">
         <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        {% if site.show_blurbs and post.blurb %}
-        <p class="post-blurb">{{ post.blurb | escape }}</p>
-        {% endif %}
-    </div>
-</div>
+    </p>
+
+    {% if site.show_dates %}
+    <p class="label">{{ post.date | date: site.date_format }}</p>
+    {% endif %}
+</section>
 {% endunless %}
 {% endfor %}
 
-
-<!-- Archive Link -->
-
 {% if listing_limit < post_count %}
-<div class="grid-row post-listing archive-link align-right">
-    <div class="grid-col">
-        <a href={{"archive" | relative_url }}>
-            Archive <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-        </a>
-    </div>
-</div>
+    <a class="archive-link" href={{"archive" | relative_url }}>&larr; Older Posts</a>
 {% endif %}
