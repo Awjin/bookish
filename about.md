@@ -9,9 +9,9 @@ header_order: 2
 
 Bookish is a barebones blogging theme for [Jekyll][jekyll].
 
-It's built with [Type Reset][type-reset] for beautiful text.
+It's built with [Type Reset][type-reset] for crisp readability.
 
-Check out the [source on Github][bookish].
+See the [source on Github][bookish].
 
 [type-reset]: https://github.com/awjin/type-reset
 [jekyll]:     https://github.com/jekyll/jekyll
