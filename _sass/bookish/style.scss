@@ -4,9 +4,8 @@
 body {
     box-sizing: content-box;
     max-width: $type-reset-max-content-width;
-    margin: $type-reset-leading auto 33vh auto;
-    padding-right: $type-reset-leading * 1.25;
-    padding-left: $type-reset-leading * 1.25;
+    margin: 0 auto 25vh auto;
+    padding: $type-reset-leading * 1.25;
 }
 
 .site-header {
