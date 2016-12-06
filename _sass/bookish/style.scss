@@ -15,6 +15,15 @@ body {
     }
 }
 
+@keyframes fadein {
+    from { opacity: 0.25; }
+    to   { opacity: 1.00; }
+}
+
+.site-content {
+    animation: fadein 0.25s;
+}
+
 .post-listing {
     margin: $type-reset-leading 0;
 
@@ -60,6 +69,7 @@ body {
     }
 }
 
+a:hover,
 a:focus,
 a:active {
     outline: none;
