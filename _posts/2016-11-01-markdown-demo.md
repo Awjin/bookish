@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Markdown Demo
 tags: [Demo, Long]
 ---

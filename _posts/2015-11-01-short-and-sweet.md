@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Short and Sweet
 tags: Short
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: An Article Whose Title is So Outrageously Long that It Stretches All the Way to the Right and then Wraps onto the Next Line
 tags: [Demo, Short]
 ---

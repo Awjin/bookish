@@ -13,7 +13,16 @@ group_by_year: true
 google-analytics: false
 
 markdown: kramdown
+highlighter: rouge
 
 exclude:
     - Gemfile
     - Gemfile.lock
+
+defaults:
+    -
+        scope:
+            path: ""
+            type: "posts"
+        values:
+            layout: "post"
