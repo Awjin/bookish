@@ -1,14 +1,14 @@
 title: Bookish
 baseurl: ""
-
 description: A barebones blogging theme for Jekyll.
 lang: "en"
 
 date_format_short: "%m/%d"
 date_format_long: "%Y/%m/%d"
 
+show_description: true
 show_pinned_posts: true
-group_by_year: false
+group_by_year: true
 
 google-analytics: false
 
