@@ -1,10 +1,15 @@
 ---
 layout: default
-home: true
 ---
 
-<header class="content-header">
+<header class="whitespace-below">
     <h1>{{ site.title | escape }}</h1>
+
+    {% if site.show_description %}
+    <p class="label">
+        {{ site.description | escape }}
+    </p>
+    {% endif %}
 </header>
 
 {{ content }}
