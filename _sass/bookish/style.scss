@@ -1,6 +1,3 @@
-/*
- *  Base
- */
 body {
     box-sizing: content-box;
     max-width: $type-reset-max-content-width;
@@ -18,14 +15,6 @@ body {
     }
 }
 
-.site-content {
-    margin-top: $type-reset-leading * 2;
-}
-
-
-/*
- *  Post listings
- */
 .post-listing {
     margin: $type-reset-leading 0;
 
@@ -47,23 +36,13 @@ body {
     }
 }
 
-
-/*
- *  Components
- */
-a:focus,
-a:active {
-    outline: none;
-    color: $type-reset-color;
+.whitespace-below {
+    margin-bottom: $type-reset-vertical-rhythm * $type-reset-margin-scale-h2;
 }
 
 .label {
     font-family: $type-reset-font-family-sans;
     color: $type-reset-color-lightest;
-}
-
-.whitespace-below {
-    margin-bottom: $type-reset-vertical-rhythm * $type-reset-margin-scale-h2;
 }
 
 .img-wrapper {
@@ -79,4 +58,10 @@ a:active {
         color: $type-reset-color-lighter;
         font-style: italic;
     }
+}
+
+a:focus,
+a:active {
+    outline: none;
+    color: $type-reset-color;
 }

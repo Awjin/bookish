@@ -1,4 +1,4 @@
-<header class="site-header label">
+<header class="site-header whitespace-below label">
     {% assign pages = site.pages | where: "show_in_header", "true" | sort: "header_order" %}
     {% for page in pages %}
     <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
