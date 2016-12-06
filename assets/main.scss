@@ -5,11 +5,5 @@
 
 @import "type-reset/type-reset";
 
-$max-content-width: $type-reset-max-content-width;
-$leading:           $type-reset-leading;
-$whitespace:        $type-reset-vertical-rhythm * $type-reset-margin-scale-h2;
-$color-lighter:     $type-reset-color-lighter;
-$color-lightest:    $type-reset-color-lightest;
-
 @import "bookish/style",
         "bookish/syntax-highlighting";

@@ -1,55 +1,18 @@
-#
-# Site Config
-#
-
 title: Bookish
-name:  Awjin Ahn
-email: awjinahn@gmail.com
+baseurl: ""
 
-baseurl:
-    # Can be blank
-    # Set this if e.g. you have multiple sites with the same root url
-
-date_format: "%Y/%m/%d"
-
-color_theme: light
-    # { light }
-
-description: A crisp, readable Jekyll theme.
-    # Can be blank
-    # Included in head for SEO
-
+description: A barebones blogging theme for Jekyll.
 lang: "en"
-    # HTML lang
-    # Default: "en"
 
+date_format_short: "%m/%d"
+date_format_long: "%Y/%m/%d"
 
-#
-# Homepage Config
-#
+show_pinned_posts: true
+group_by_year: false
 
-listing_limit: 2
-    # { blank = no limit }
-    # Number of posts shown on the homepage
-    # Remaining posts are listed in Archive
-    # Pinned posts do not count against limit
-
-show_dates: true
-    # { true / false }
-    # Show the published date next to the title
-
-show_pinned: true
-    # { true / false }
-    # Show pinned posts at the top
-
-
-#
-# Build Config
-#
+google-analytics: false
 
 markdown: kramdown
-    # Markdown engine
-    # Default: kramdown
 
 exclude:
     - Gemfile

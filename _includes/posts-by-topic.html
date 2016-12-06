@@ -1,0 +1,20 @@
+{% capture tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags = tags | split: ',' | sort %}
+{% assign posts = site.posts %}
+
+{% for tag in tags %}
+<h2 id="{{ tag }}">{{ tag }}</h2>
+{% for post in posts %}
+{% if post.tags contains tag %}
+<div class="post-listing">
+    <div class="col-left label">
+        {{ post.date | date: site.date_format_long }}
+    </div>
+
+    <div class="col-right">
+        <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}

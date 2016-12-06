@@ -1,0 +1,16 @@
+{% if site.show_pinned_posts %}
+{% for post in site.posts %}
+{% if post.pinned %}
+<div class="post-listing">
+    <div class="col-left label">
+        Pinned &hearts;
+    </div>
+
+    <div class="col-right">
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+{% endif %}
+<hr>

@@ -3,20 +3,20 @@ layout: default
 ---
 
 <article>
-    <h1>{{ page.title | escape }}</h1>
+    <header class="content-header">
+        <h1>{{ page.title | escape }}</h1>
 
-    <section class="post-info label">
-        <time datetime="{{ page.date | date_to_xmlschema }}">
-            {{ page.date | date: site.date_format }}
-        </time>
+        <span class="label">
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: site.date_format_long }}
+            </time>
 
-        {% for tag in page.tags %}
-        {% if forloop.first %}
-        &nbsp;in
-        {% endif %}
-        &nbsp;<a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>
-        {% endfor %}
-    </section>
+            {% for tag in page.tags %}
+            {% if forloop.first %}&nbsp;in{% endif %}
+            &nbsp;<a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>
+            {% endfor %}
+        </span>
+    </header>
 
     {{ content }}
 </article>

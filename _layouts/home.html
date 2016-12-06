@@ -3,59 +3,11 @@ layout: default
 home: true
 ---
 
-{% assign content_string = content | strip_newlines %}
+<header class="content-header">
+    <h1>{{ site.title | escape }}</h1>
+</header>
 
-{% unless content_string == "" %}
 {{ content }}
-{% endunless %}
 
-
-<!-- Pinned Posts -->
-
-{% assign pinned_post_count = 0 %}
-
-{% if site.show_pinned %}
-{% for post in site.posts %}
-{% if post.pinned %}
-{% assign pinned_post_count = pinned_post_count | plus: 1 %}
-<section class="post-listing">
-    <p class="post-listing-title">
-        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    </p>
-
-    <p class="label">Pinned</p>
-</section>
-{% endif %}
-{% endfor %}
-{% endif %}
-
-
-<!-- Regular Posts -->
-
-{% for post in site.posts %}
-{% assign post_count = post_count | plus: 1 %}
-{% endfor %}
-
-{% if site.listing_limit == "" %}
-{% assign listing_limit = post_count %}
-{% else %}
-{% assign listing_limit = site.listing_limit | plus: pinned_post_count) %}
-{% endif %}
-
-{% for post in site.posts limit: listing_limit %}
-{% unless site.show_pinned and post.pinned %}
-<section class="post-listing">
-    <p class="post-listing-title">
-        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    </p>
-
-    {% if site.show_dates %}
-    <p class="label">{{ post.date | date: site.date_format }}</p>
-    {% endif %}
-</section>
-{% endunless %}
-{% endfor %}
-
-{% if listing_limit < post_count %}
-    <a class="archive-link" href={{"archive" | relative_url }}>&larr; Older Posts</a>
-{% endif %}
+{% include pinned-posts.html %}
+{% include posts-by-date.html %}

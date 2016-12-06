@@ -1,0 +1,8 @@
+{% capture tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags = tags | split: ',' | sort %}
+
+<p class="label">
+    {% for tag in tags %}
+    <a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>&nbsp;
+    {% endfor %}
+</p>
