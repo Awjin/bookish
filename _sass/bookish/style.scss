@@ -2,24 +2,25 @@
  *  Base
  */
 body {
-    padding: $type-reset-leading * 1.25;
+    box-sizing: content-box;
+    max-width: $type-reset-max-content-width;
+    margin: $type-reset-leading auto 33vh auto;
+    padding-right: $type-reset-leading * 1.25;
+    padding-left: $type-reset-leading * 1.25;
 }
 
 .site-header {
-    position: absolute;
-    top: 0;
-    left: 0;
+    text-align: right;
 
     a {
-        display: block;
+        display: inline-block;
         margin-bottom: $type-reset-leading / 4;
+        margin-left: 1rem;
     }
 }
 
 .site-content {
-    box-sizing: content-box;
-    max-width: $type-reset-max-content-width;
-    margin: ($type-reset-leading * 3) auto ($type-reset-leading * 9) auto;
+    margin-top: $type-reset-leading * 2;
 }
 
 
@@ -27,30 +28,34 @@ body {
  *  Post listings
  */
 .post-listing {
-    margin-bottom: $type-reset-leading;
-}
+    margin: $type-reset-leading 0;
 
-.col-left {
-    margin-right: $type-reset-leading;
-    margin-bottom: $type-reset-leading / 4;
-}
-
-@media all and (min-width: $type-reset-max-content-width) {
-    .col-left {
-        float: left;
+    a {
+        display: inline-block;
     }
-}
 
-.col-right {
-    overflow: hidden;
+    .col-left {
+        margin-right: $type-reset-leading;
+        margin-bottom: $type-reset-leading / 4;
+    }
+
+    @media all and (min-width: $type-reset-max-content-width) {
+        .col-left { float: left; }
+    }
+
+    .col-right {
+        overflow: hidden;
+    }
 }
 
 
 /*
  *  Components
  */
-.content-header {
-    margin-bottom: $type-reset-vertical-rhythm * $type-reset-margin-scale-h2;
+a:focus,
+a:active {
+    outline: none;
+    color: $type-reset-color;
 }
 
 .label {
@@ -58,11 +63,8 @@ body {
     color: $type-reset-color-lightest;
 }
 
-a:focus {
-    background: $type-reset-color-actionable;
-    color: $type-reset-color-background;
-    outline: none;
-    text-decoration: none;
+.whitespace-below {
+    margin-bottom: $type-reset-vertical-rhythm * $type-reset-margin-scale-h2;
 }
 
 .img-wrapper {

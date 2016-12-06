@@ -12,7 +12,9 @@
     </div>
 
     <div class="col-right">
-        <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <a href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+        </a>
     </div>
 </div>
 {% endif %}
