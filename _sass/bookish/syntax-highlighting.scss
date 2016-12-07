@@ -8,7 +8,7 @@ pre.highlight {
      *  .cp - Comment.Preproc   - Preprocessor comments such as <% %> in ERb
      */
     .c, .cm, .c1, .cs {
-        color: $type-reset-color-lightest;
+        color: $tr-color-text-lightest;
         font-style: italic;
     }
 
@@ -21,7 +21,7 @@ pre.highlight {
      *  .err - Error - Lexer errors
      */
     .err {
-        color: $type-reset-color-lightest;
+        color: $tr-color-text-lightest;
     }
 
 
@@ -48,7 +48,7 @@ pre.highlight {
     }
 
     .gr, .gd, .gh, .gi, .gl, .go, .gu, .gt {
-        color: $type-reset-color-lightest;
+        color: $tr-color-text-lightest;
     }
 
     .ge {
@@ -144,7 +144,7 @@ pre.highlight {
      *  .w - Whitespace - Specially highlighted whitespace
      */
     .w {
-        color: $type-reset-color-lightest;
+        color: $tr-color-text-lightest;
     }
 
 

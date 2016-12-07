@@ -1,8 +1,8 @@
 body {
     box-sizing: content-box;
-    max-width: $type-reset-max-content-width;
+    max-width: $tr-max-content-width;
     margin: 0 auto 25vh auto;
-    padding: $type-reset-leading * 1.25;
+    padding: $tr-leading * 1.25;
 }
 
 .site-header {
@@ -10,33 +10,24 @@ body {
 
     a {
         display: inline-block;
-        margin-bottom: $type-reset-leading / 4;
+        margin-bottom: $tr-leading / 4;
         margin-left: 1rem;
     }
 }
 
-@keyframes fadein {
-    from { opacity: 0.25; }
-    to   { opacity: 1.00; }
-}
-
-.site-content {
-    animation: fadein 0.25s;
-}
-
 .post-listing {
-    margin: $type-reset-leading 0;
+    margin: $tr-leading 0;
 
     a {
         display: inline-block;
     }
 
     .col-left {
-        margin-right: $type-reset-leading;
-        margin-bottom: $type-reset-leading / 4;
+        margin-right: $tr-leading;
+        margin-bottom: $tr-leading / 4;
     }
 
-    @media all and (min-width: $type-reset-max-content-width) {
+    @media all and (min-width: $tr-max-content-width) {
         .col-left { float: left; }
     }
 
@@ -46,25 +37,25 @@ body {
 }
 
 .whitespace-below {
-    margin-bottom: $type-reset-vertical-rhythm * $type-reset-margin-scale-h2;
+    margin-bottom: tr-scale-margin(2);
 }
 
 .label {
-    font-family: $type-reset-font-family-sans;
-    color: $type-reset-color-lightest;
+    font-family: $tr-font-stack-sans-serif;
+    color: $tr-color-text-lightest;
 }
 
 .img-wrapper {
     display: block;
-    margin: ($type-reset-leading * 2) 0;
+    margin: ($tr-leading * 2) 0;
 
     img {
         width: 100%;
     }
 
     .img-caption {
-        margin-top: $type-reset-leading / 2;
-        color: $type-reset-color-lighter;
+        margin-top: $tr-leading / 2;
+        color: $tr-color-text-lighter;
         font-style: italic;
     }
 }
@@ -73,5 +64,5 @@ a:hover,
 a:focus,
 a:active {
     outline: none;
-    color: $type-reset-color;
+    color: $tr-color-text;
 }
