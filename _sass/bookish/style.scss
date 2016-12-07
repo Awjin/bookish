@@ -7,6 +7,7 @@ body {
 
 .site-header {
     float: right;
+    font-family: $tr-font-stack-sans-serif;
 
     a {
         display: inline-block;
@@ -41,7 +42,6 @@ body {
 }
 
 .label {
-    font-family: $tr-font-stack-sans-serif;
     color: $tr-color-text-lightest;
 }
 
