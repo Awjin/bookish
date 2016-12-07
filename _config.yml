@@ -8,7 +8,7 @@ lang: "en"
 show_description: true
 show_pinned_posts: true
 
-google-analytics: false
+google_analytics_tracking_code: ""
 
 markdown: kramdown
 highlighter: rouge

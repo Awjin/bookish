@@ -3,7 +3,5 @@
 
 @charset "utf-8";
 
-@import "type-reset/type-reset";
-
-@import "bookish/style",
-        "bookish/syntax-highlighting";
+@import "type-reset/type-reset",
+        "bookish/bookish";
