@@ -8,7 +8,7 @@ layout: default
 
         <span class="label">
             <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{ page.date | date: site.date_format_long }}
+                {{ page.date | date: site.date_format }}
             </time>
 
             {% for tag in page.tags %}

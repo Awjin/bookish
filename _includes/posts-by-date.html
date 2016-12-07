@@ -1,20 +1,8 @@
-{% assign prev_loop_year = ""%}
-
 {% for post in site.posts  %}
 {% if site.show_pinned_posts and post.pinned %}{% continue %}{% endif %}
-
-{% capture curr_loop_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-{% if site.group_by_year and curr_loop_year != prev_loop_year %}
-<h2>{{ curr_loop_year }}</h2>
-{% endif %}
-
 <div class="post-listing">
     <div class="col-left label">
-        {% if site.group_by_year %}
-        {{ post.date | date: site.date_format_short }}
-        {% else %}
-        {{ post.date | date: site.date_format_long }}
-        {% endif %}
+        {{ post.date | date: site.date_format }}
     </div>
 
     <div class="col-right">
@@ -23,6 +11,4 @@
         </a>
     </div>
 </div>
-
-{% assign prev_loop_year = curr_loop_year %}
 {% endfor %}
