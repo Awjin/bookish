@@ -1,0 +1,13 @@
+pre.highlight {
+    .cp, .gp, .gs, .k, .kc, .kd, .kn, .kp, .kr, .kt, .nc, .ne, .o, .ow {
+        font-weight: bold;
+    }
+
+    .c, .cm, .c1, .cs, .ge {
+        font-style: italic;
+    }
+
+    .c, .cm, .c1, .cs, .err, .gr, .gd, .gh, .gi, .gl, .go, .gu, .gt, .w {
+        color: $color-text-light;
+    }
+}

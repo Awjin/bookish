@@ -3,5 +3,7 @@
 
 @charset "utf-8";
 
-@import "type-reset/type-reset",
-        "bookish/bookish";
+body {
+    @import "breathable/main.scss",
+            "bookish/main.scss";
+}
