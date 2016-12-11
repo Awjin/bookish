@@ -1,10 +1,10 @@
 & {
-    margin: 0 auto 25vh auto;
+    margin: 0 auto 30vh auto;
     padding: $leading * 1.25;
 }
 
 .site-header {
-    text-align: right;
+    float: right;
     font-family: $font-stack-sans-serif;
 
     a {
@@ -38,7 +38,7 @@
 }
 
 .whitespace-below {
-    margin-bottom: scale-margin(2);
+    margin-bottom: scale-margin(1);
 }
 
 .label {
