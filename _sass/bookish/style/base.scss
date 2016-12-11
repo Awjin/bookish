@@ -4,13 +4,13 @@
 }
 
 .site-header {
-    float: right;
+    text-align: right;
     font-family: $font-stack-sans-serif;
 
     a {
         display: inline-block;
         margin-bottom: $leading / 4;
-        margin-left: 1rem;
+        margin-left: $leading;
     }
 }
 
@@ -38,7 +38,7 @@
 }
 
 .whitespace-below {
-    margin-bottom: scale-margin(1);
+    margin-bottom: scale-margin(2);
 }
 
 .label {

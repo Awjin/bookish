@@ -4,9 +4,7 @@ layout: default
 
 <header class="whitespace-below">
     <h1>{{ page.title | escape }}</h1>
+    {% include comma-delimited-tags.html %}
 </header>
 
-{{ content }}
-
-{% include comma-delimited-tags.html %}
 {% include posts-by-topic.html %}
