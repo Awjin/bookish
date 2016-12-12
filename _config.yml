@@ -9,6 +9,7 @@ show_description: true
 show_pinned_posts: true
 
 google_analytics_tracking_code: ""
+disqus_name: ""
 
 markdown: kramdown
 highlighter: rouge
@@ -24,3 +25,4 @@ defaults:
             type: "posts"
         values:
             layout: "post"
+            comments: true

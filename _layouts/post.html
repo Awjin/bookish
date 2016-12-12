@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article>
+<article class="whitespace-below">
     <header class="whitespace-below">
         <h1>{{ page.title | escape }}</h1>
 
@@ -20,3 +20,7 @@ layout: default
 
     {{ content }}
 </article>
+
+{% if page.comments %}
+{% include disqus.html %}
+{% endif %}
