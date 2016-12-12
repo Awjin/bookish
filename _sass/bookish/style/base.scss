@@ -1,6 +1,6 @@
 & {
     margin: 0 auto 30vh auto;
-    padding: $leading * 1.25;
+    padding: $whitespace * 1.25;
 }
 
 .site-header {
@@ -9,21 +9,21 @@
 
     a {
         display: inline-block;
-        margin-bottom: $leading / 4;
-        margin-left: $leading;
+        margin-bottom: $whitespace / 4;
+        margin-left: $whitespace;
     }
 }
 
 .post-listing {
-    margin: $leading 0;
+    margin: $whitespace 0;
 
     a {
         display: inline-block;
     }
 
     .col-left {
-        margin-right: $leading;
-        margin-bottom: $leading / 4;
+        margin-right: $whitespace;
+        margin-bottom: $whitespace / 4;
     }
 
     @media all and (min-width: $max-width) {
@@ -47,14 +47,14 @@
 
 .img-wrapper {
     display: block;
-    margin: ($leading * 2) 0;
+    margin: ($whitespace * 2) 0;
 
     img {
         width: 100%;
     }
 
     .img-caption {
-        margin-top: $leading / 2;
+        margin-top: $whitespace / 2;
         color: $color-text-light;
         font-style: italic;
     }
