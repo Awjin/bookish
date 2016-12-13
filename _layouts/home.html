@@ -6,9 +6,7 @@ layout: default
     <h1>{{ site.title | escape }}</h1>
 
     {% if site.show_description %}
-    <p class="label">
-        {{ site.description | escape }}
-    </p>
+    <p class="label">{{ site.description | escape }}</p>
     {% endif %}
 </header>
 
@@ -16,5 +14,8 @@ layout: default
     {{ content }}
 </div>
 
+{% if site.show_pinned_posts %}
 {% include pinned-posts.html %}
+{% endif %}
+
 {% include posts-by-date.html %}

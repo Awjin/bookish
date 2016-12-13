@@ -7,12 +7,12 @@ show_in_header: true
 header_order: 2
 ---
 
-Bookish is a barebones blogging theme for [Jekyll][jekyll].
+Bookish is a barebones blogging theme for [Jekyll][1].
 
-It's built with [Breathable][breathable] for max readability.
+It's built with [breezy-type][2] for max readability.
 
-See the [source on Github][bookish].
+See the [source on Github][3].
 
-[breathable]: https://github.com/awjin/breathable
-[jekyll]:     https://github.com/jekyll/jekyll
-[bookish]:    https://github.com/awjin/bookish
+[1]: https://github.com/jekyll/jekyll
+[2]: https://github.com/awjin/breezy-type
+[3]: https://github.com/awjin/bookish

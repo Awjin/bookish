@@ -7,14 +7,9 @@ layout: default
         <h1>{{ page.title | escape }}</h1>
 
         <span class="label">
-            <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{ page.date | date: site.date_format }}
-            </time>
-
-            {% for tag in page.tags %}
-            {% if forloop.first %}&nbsp;in{% endif %}
-            &nbsp;<a href="{{ "topics/#" | append: tag | relative_url }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>
-            {% endfor %}
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time>
+            {% assign tags = page.tags %}
+            {% include delimit-tags-by-comma.html %}
         </span>
     </header>
 

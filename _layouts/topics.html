@@ -4,7 +4,11 @@ layout: default
 
 <header class="whitespace-below">
     <h1>{{ page.title | escape }}</h1>
-    {% include comma-delimited-tags.html %}
+
+    <p class="label">
+        {% include sitewide-tag-list.html %}
+        {% include delimit-tags-by-comma.html %}
+    </p>
 </header>
 
 {% include posts-by-topic.html %}

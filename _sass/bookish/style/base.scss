@@ -49,6 +49,10 @@
     color: $color-text-light;
 }
 
+time {
+    margin-right: $whitespace / 2;
+}
+
 .img-wrapper {
     display: block;
     margin: ($whitespace * 2) 0;

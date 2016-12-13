@@ -1,5 +1,7 @@
 {% for post in site.posts  %}
-{% if site.show_pinned_posts and post.pinned %}{% continue %}{% endif %}
+{% if site.show_pinned_posts and post.pinned %}
+{% continue %}
+{% endif %}
 <div class="post-listing">
     <div class="col-left label">
         {{ post.date | date: site.date_format }}
